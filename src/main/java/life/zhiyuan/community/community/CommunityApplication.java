@@ -1,4 +1,4 @@
-package life.zhuyuan.community.community;
+package life.zhiyuan.community.community;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package life.zhuyuan.community.community;
+package life.zhiyuan.community.community;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

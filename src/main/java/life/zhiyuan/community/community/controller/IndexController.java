@@ -1,4 +1,4 @@
-package life.zhuyuan.community.community.controller;
+package life.zhiyuan.community.community.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
