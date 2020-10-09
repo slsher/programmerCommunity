@@ -22,6 +22,7 @@ public class IndexController {
 
     @GetMapping("/")
     public String index(HttpServletRequest request) {
+        //获取cookie 获取cookie中的token 然后在获取session
         Cookie[] cookies = request.getCookies();
         for (Cookie cookie:cookies){
             if (cookie.getName().equals("token")){

@@ -6,7 +6,7 @@ package life.zhiyuan.community.community.dto;
 public class GithubUser {
     private String name;
     private Long id;
-    private String bio;
+    private String bio;// 简介
 
     public String getName() {
         return name;
