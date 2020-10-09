@@ -21,5 +21,14 @@
 ## 脚本
 ``` sql 
 
+create table USER_1
+(
+	ID bigint,
+	ACCOUNT_ID varchar(100),
+	NAME varchar(50),
+	TOKEN varchar(36),
+	GMT_CREATE bigint,
+	GMT_MODIFIED bigint
+);
 
 ```
