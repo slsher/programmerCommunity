@@ -1,8 +1,11 @@
 package life.zhiyuan.community.community.dto;
 
+import lombok.Data;
+
 /**
  * Created by zhuzhiwen by 2020/9/27 20:34
  */
+
 public class AccessTokenDTO {
     private String client_id;
     private String client_secret;

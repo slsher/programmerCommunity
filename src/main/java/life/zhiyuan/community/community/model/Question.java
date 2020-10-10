@@ -1,5 +1,7 @@
 package life.zhiyuan.community.community.model;
 
+import lombok.Data;
+
 /**
  * Created by zhuzhiwen by 2020/10/10 19:51
  */

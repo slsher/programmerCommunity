@@ -13,6 +13,7 @@
 * [每一个开发人员都应该懂的 UML 规范](https://blog.csdn.net/coderising/article/details/89944201)
 * [菜鸟教程](https://www.runoob.com/)
 * [H2数据库](http://www.h2database.com/html/main.html)
+* [lombok](https://projectlombok.org/setup/maven)
 ## 工具
 * [github地址](https://github.com/) 
 * [visual](https://www.visual-paradigm.com/cn/)
