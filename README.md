@@ -14,6 +14,7 @@
 * [菜鸟教程](https://www.runoob.com/)
 * [H2数据库](http://www.h2database.com/html/main.html)
 * [lombok](https://projectlombok.org/setup/maven)
+* [thymeleaf](https://www.thymeleaf.org/)
 ## 工具
 * [github地址](https://github.com/) 
 * [visual](https://www.visual-paradigm.com/cn/)
