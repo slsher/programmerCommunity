@@ -10,7 +10,7 @@ public class GithubUser {
     private String name;
     private Long id;
     private String bio;// 简介
-    private String avatar_url;//头像
+    private String avatarUrl;//头像
 
     public String getName() {
         return name;
@@ -36,12 +36,12 @@ public class GithubUser {
         this.bio = bio;
     }
 
-    public String getAvatar_url() {
-        return avatar_url;
+    public String getAvatarUrl() {
+        return avatarUrl;
     }
 
-    public void setAvatar_url(String avatar_url) {
-        this.avatar_url = avatar_url;
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
     }
 
     @Override
@@ -50,7 +50,7 @@ public class GithubUser {
                 "name='" + name + '\'' +
                 ", id=" + id +
                 ", bio='" + bio + '\'' +
-                ", avatar_url='" + avatar_url + '\'' +
+                ", avatarUrl='" + avatarUrl + '\'' +
                 '}';
     }
 }
