@@ -17,24 +17,10 @@ public class PaginationDTO {
     private Integer totalPage;
 
     //计算页面有多少页可以显示
-    public void setPagination(Integer totalCount, Integer page, Integer size) {
-        if (totalCount % size == 0) {
-            // 如果等于0
-            totalPage = totalCount / size;
-        } else {
-            // 如果不等于0
-            totalPage = totalCount / size + 1;
-        }
+    public void setPagination(Integer totalPage, Integer page) {
+        this.totalPage = totalPage;
+        this.page = page;
 
-        //没有页数的处理
-        if (page<1){
-            page=1;
-        }
-        if (page>totalPage){
-            page=totalPage;
-        }
-
-        this.page=page;
         pages.add(page);
         for (int i = 1; i <= 3; i++) {
             if (page - i > 0) {
