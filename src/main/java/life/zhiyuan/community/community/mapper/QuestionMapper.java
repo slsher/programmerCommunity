@@ -1,5 +1,6 @@
 package life.zhiyuan.community.community.mapper;
 
+import life.zhiyuan.community.community.dto.QuestionDTO;
 import life.zhiyuan.community.community.model.Question;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -27,4 +28,7 @@ public interface QuestionMapper {
 
     @Select("select count(1) from  question where creator=#{userId}")
     Integer countByUserId(@Param(value = "userId") Integer userId);
+
+    @Select("select * from question where id=#{id}")
+    Question getById(@Param(value = "id")Integer id);
 }
