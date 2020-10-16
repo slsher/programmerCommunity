@@ -35,3 +35,7 @@ create table USER_1
 );
 
 ```
+
+```bash
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
+```
