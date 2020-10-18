@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="nodeModules/css/community.css">
     <script src="nodeModules/jquery/dist/jquery.min.js"></script>
     <script src="nodeModules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="application/javascript">
+        window.onload=function (){
+            var closable = window.localStorage.getItem("closable");
+            if (closable=="true"){
+                window.close();
+                window.localStorage.removeItem("closable");
+            }
+
+        }
+    </script>
 </head>
 <body>
 <!--顶部-->

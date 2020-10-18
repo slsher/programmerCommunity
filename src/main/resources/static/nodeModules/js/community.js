@@ -2,28 +2,36 @@
  *Created by zhuzhiwen by 2020/10/17 23:14
  */
 
-function post(){
-    var questionId=$("#question_id").val();
+function post() {
+    var questionId = $("#question_id").val();
     let content = $("#comment_content").val();
 
     $.ajax({
-        type:"POST",
-        url:"/comment",
-        contentType:"application/json",
-        data:JSON.stringify({
-            "parentId":questionId,
-            "content":content,
+        type: "POST",
+        url: "/comment",
+        contentType: "application/json",
+        data: JSON.stringify({
+            "parentId": questionId,
+            "content": content,
             "type": 1
         }),
-        success:function (response){
-            if (response.code==200){
+        success: function (response) {
+            if (response.code == 200) {
                 $("#comment_section").hide();
-            }else {
-                alert(response.message);
+            } else {
+                if (response.code == 2003) {
+                    var isAccepted = confirm(response.message);
+                    if (isAccepted) {
+                        window.open("https://github.com/login/oauth/authorize?client_id=d0d3ade7e00a78d3000f&redirect_uri=http://localhost:8887/callback&scope=user&state=1");
+                        window.localStorage.setItem("closable",true);
+                    }
+                } else {
+                    alert(response.message);
+                }
             }
-            console.log(response)
+            // console.log(response)
         },
-        dataType:"json"
+        dataType: "json"
     })
     /*console.log(questionId);
     console.log(content)*/
