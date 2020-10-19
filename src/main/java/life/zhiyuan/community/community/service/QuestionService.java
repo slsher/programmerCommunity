@@ -67,9 +67,8 @@ public class QuestionService {
             BeanUtils.copyProperties(question, questionDTO);
             questionDTO.setUser(user);
             questionDTOList.add(questionDTO);
-
-
         }
+
         paginationDTO.setQuestions(questionDTOList);
         return paginationDTO;
     }

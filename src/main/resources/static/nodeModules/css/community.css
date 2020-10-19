@@ -22,7 +22,7 @@ body {
     width: 38px;
 }
 
-.media-body {
+.media-body-input {
     padding-top: 10px;
 }
 
@@ -36,9 +36,14 @@ body {
     margin-top: 15px;
 }
 
+.question-title{
+    margin-top: 25px;
+}
 .community-menu {
     color: #999999;
     font-size: 13px;
+    margin-bottom: 15px;
+    display: block;
 }
 
 .jumbotron {
@@ -57,4 +62,24 @@ body {
     line-height: 34px;
     padding: 0 10px;
     font-size: 14px;
+}
+.comments{
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #f5f5f5;
+}
+.comment-sp{
+    margin-top: 0;
+}
+.menu{
+    color: #999999;
+    margin-top: 5px;
+}
+.menu .icon{
+    margin-right: 6px;
+    font-size: 15px;
+    cursor:pointer;
+}
+.menu .icon:hover{
+    color: #428bca;
 }
