@@ -97,6 +97,13 @@ body {
     cursor: pointer;
 }
 
+.menu .comment-icon{
+    font-size: 15px;
+    cursor: pointer;
+}
+.menu .comment-icon:hover {
+    color: #428bca;
+}
 .menu .active {
     color: #428bca;
 }
