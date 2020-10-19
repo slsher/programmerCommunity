@@ -22,6 +22,7 @@
 * [visual](https://www.visual-paradigm.com/cn/)
 * [mvnrepository](https://mvnrepository.com/search?q=h2)
 * [flyway](https://flywaydb.org/documentation/getstarted/firststeps/maven)
+* [jquery](https://jquery.cuishifeng.cn/jQuery.getJSON.html)
 
 ## 脚本
 ``` sql 

@@ -36,9 +36,10 @@ body {
     margin-top: 15px;
 }
 
-.question-title{
+.question-title {
     margin-top: 25px;
 }
+
 .community-menu {
     color: #999999;
     font-size: 13px;
@@ -54,6 +55,17 @@ body {
     margin: 10px 0;
 }
 
+.sub-comments{
+    border-radius:5px ;
+    margin-top: 10px;
+    border: 1px solid #f5f5f5;
+    padding-top: 15px;
+    margin-bottom: 15px;
+}
+
+.sub-comments .btn{
+    margin: 10px 0;
+}
 .btn-comment {
     float: right;
     margin-bottom: 10px;
@@ -63,23 +75,32 @@ body {
     padding: 0 10px;
     font-size: 14px;
 }
-.comments{
+
+.comments {
     margin-bottom: 15px;
     padding-bottom: 5px;
     border-bottom: 1px solid #f5f5f5;
 }
-.comment-sp{
+
+.comment-sp {
     margin-top: 0;
 }
-.menu{
+
+.menu {
     color: #999999;
     margin-top: 5px;
 }
-.menu .icon{
+
+.menu .icon {
     margin-right: 6px;
     font-size: 15px;
-    cursor:pointer;
+    cursor: pointer;
 }
-.menu .icon:hover{
+
+.menu .active {
+    color: #428bca;
+}
+
+.menu .icon:hover {
     color: #428bca;
 }

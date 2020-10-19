@@ -1,7 +1,9 @@
 package life.zhiyuan.community.community.controller;
 
 import life.zhiyuan.community.community.dto.CommentCreateDTO;
+import life.zhiyuan.community.community.dto.CommentDTO;
 import life.zhiyuan.community.community.dto.ResultDTO;
+import life.zhiyuan.community.community.enums.CommentTypeEnum;
 import life.zhiyuan.community.community.exception.CustomizeErrorCode;
 import life.zhiyuan.community.community.model.Comment;
 import life.zhiyuan.community.community.model.User;
@@ -13,6 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * Created by zhuzhiwen by 2020/10/16 22:42
@@ -47,5 +50,11 @@ public class CommentController {
         comment.setLikeCount(0l);
         commentService.insert(comment);
         return ResultDTO.okof();
+    }
+    @ResponseBody
+    @RequestMapping(value = "/comment/{id}", method = RequestMethod.GET)
+    public ResultDTO<List> comments(@PathVariable(name = "id")Long id){
+        List<CommentDTO> commentDTOS = commentService.listByTargetId(id, CommentTypeEnum.COMMENT);
+        return ResultDTO.okof(commentDTOS);
     }
 }
