@@ -62,13 +62,14 @@ body {
     padding-top: 10px;
 }
 .publish-tag-tab .label-info{
-    margin-right: 10px;
+    white-space: normal;
+    margin: 5px 5px;
+    display: inline-block;
 }
 .community-menu {
     color: #999999;
     font-size: 13px;
     margin-bottom: 15px;
-    display: block;
 }
 
 .jumbotron {
