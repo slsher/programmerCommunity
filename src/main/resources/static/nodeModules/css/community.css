@@ -39,6 +39,22 @@ body {
 .question-title {
     margin-top: 25px;
 }
+.question-code{
+    width: 75px;
+    height: 75px;
+}
+.question-tag{
+    margin-right:5px ;
+    border-radius: 4px;
+}
+
+.question-ralated{
+    line-height: 20px;
+    font-size: 12px;
+    margin-left: 0;
+    list-style: none;
+    padding-left: 0;
+}
 
 .community-menu {
     color: #999999;
