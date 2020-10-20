@@ -123,3 +123,30 @@ function collapseComments(e) {
         }
     }
 }
+
+$(document).ready(function (){
+    $("#tag").focus(function (){
+        $("#select-tag").css("display","block")
+    })
+    $("#select-tag").blur(function (){
+        $("#select-tag").css("display","none")
+    })
+})
+
+/**展示标签选择*/
+function showSelectTag(){
+
+}
+/**发布标签选择*/
+function selectTag(e) {
+    var value=e.getAttribute("data-tag")
+    var previous = $("#tag").val();
+    /**判断是否存在相同的标签*/
+    if (previous.indexOf(value) == -1) {
+        if (previous) {
+            $("#tag").val(previous + ',' + value)
+        } else {
+            $("#tag").val(value)
+        }
+    }
+}
