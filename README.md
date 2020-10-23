@@ -18,12 +18,14 @@
 * [mybatis](http://mybatis.org/generator/index.html)
 * [postman](http://www.getpostman.com/)
 * [editorMarkDown](http://editor.md.ipandao.com/)
+* [ucloud ufile-sdk](https://github.com/ucloud/ufile-sdk-java)
 ## 工具
 * [github地址](https://github.com/) 
 * [visual](https://www.visual-paradigm.com/cn/)
 * [mvnrepository](https://mvnrepository.com/search?q=h2)
 * [flyway](https://flywaydb.org/documentation/getstarted/firststeps/maven)
 * [jquery](https://jquery.cuishifeng.cn/jQuery.getJSON.html)
+* [ucloud](https://console.ucloud.cn/ufile/ufile/detail?id=zhiyuan)
 
 ## 脚本
 ``` sql 
@@ -41,5 +43,6 @@ create table USER_1
 ```
 
 ```bash
+mvn flyway:migrate
 mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 ```

@@ -2,6 +2,7 @@ package life.zhiyuan.community.community.service;
 
 import life.zhiyuan.community.community.dto.PaginationDTO;
 import life.zhiyuan.community.community.dto.QuestionDTO;
+import life.zhiyuan.community.community.dto.QuestionQueryDTO;
 import life.zhiyuan.community.community.exception.CustomizeErrorCode;
 import life.zhiyuan.community.community.exception.CustomizeException;
 import life.zhiyuan.community.community.mapper.QuestionExtMapper;
@@ -35,10 +36,18 @@ public class QuestionService {
     @Autowired
     public UserMapper userMapper;
 
-    public PaginationDTO list(Integer page, Integer size) {
+    public PaginationDTO list(String search,Integer page, Integer size) {
+
+        if (StringUtils.isNotBlank(search)) {
+            String[] tags = StringUtils.split(search, " ");
+            search=Arrays.stream(tags).collect(Collectors.joining("|"));
+        }
+
         PaginationDTO paginationDTO = new PaginationDTO();
 
-        Integer totalCount = (int) questionMapper.countByExample(new QuestionExample());
+        QuestionQueryDTO questionQueryDTO = new QuestionQueryDTO();
+        questionQueryDTO.setSearch(search);
+        Integer totalCount =  questionExtMapper.countBySearch(questionQueryDTO);
 
         Integer totalPage;
         if (totalCount % size == 0) {
@@ -60,10 +69,10 @@ public class QuestionService {
         paginationDTO.setPagination(totalPage, page);
         // 计算页面公式 size*(page-1)
         Integer offset = size * (page - 1);
-        //QuestionService里面查询Question 同时循环查询user 赋值
-        QuestionExample questionExample = new QuestionExample();
-        questionExample.setOrderByClause("gmt_create desc");
-        List<Question> questions = questionMapper.selectByExampleWithRowbounds(questionExample, new RowBounds(offset, size));
+
+        questionQueryDTO.setSize(size);
+        questionQueryDTO.setPage(offset);
+        List<Question> questions = questionExtMapper.selectBySearch(questionQueryDTO);
         List<QuestionDTO> questionDTOList = new ArrayList<>();
 
         for (Question question : questions) {
