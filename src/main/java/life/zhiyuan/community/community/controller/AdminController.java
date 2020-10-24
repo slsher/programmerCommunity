@@ -6,6 +6,7 @@ import life.zhiyuan.community.community.dto.QuestionDTO;
 import life.zhiyuan.community.community.enums.CommentTypeEnum;
 import life.zhiyuan.community.community.model.User;
 import life.zhiyuan.community.community.service.CommentService;
+import life.zhiyuan.community.community.service.NotificationService;
 import life.zhiyuan.community.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,12 +29,14 @@ public class AdminController {
     @Autowired
     private CommentService commentService;
 
+    @Autowired
+    private NotificationService notificationService;
     @GetMapping("/admin")
     public String index(Model model,
                         HttpServletRequest request,
                         //计算页数 接受传入的参数
                         @RequestParam(name = "page", defaultValue = "1") Integer page,
-                        @RequestParam(name = "size", defaultValue = "5") Integer size,
+                        @RequestParam(name = "size", defaultValue = "10") Integer size,
                         @RequestParam(name = "search", required = false) String search) {
 
         User user = (User) request.getSession().getAttribute("user");
@@ -42,6 +45,12 @@ public class AdminController {
 
         model.addAttribute("pagination", pagination);
         model.addAttribute("search", search);
+
+        PaginationDTO paginationDTO=notificationService.list(user.getId(), page, size);
+        Long unreadCount=notificationService.unreadCount(user.getId());
+        model.addAttribute("section", "replies");
+        model.addAttribute("paginations", paginationDTO);
+        model.addAttribute("sectionName", "通知中心");
 
         return "admin";
     }

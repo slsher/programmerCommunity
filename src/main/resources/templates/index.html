@@ -62,7 +62,6 @@
                                 <span th:text="${question.commentCount}"></span>个回复&nbsp;&nbsp;&nbsp;
                                 <span class="glyphicon glyphicon-eye-open"></span>
                                 <span th:text="${question.viewCount}"></span>个浏览&nbsp;&nbsp;&nbsp;
-                                <span class="glyphicon glyphicon-time"></span>
                                 <span th:text="${#dates.format(question.gmtCreate,'yyyy-MM-dd HH:mm')}"></span></span>
                         </div>
                         <hr>
@@ -116,11 +115,10 @@
                             <span  th:text="${question.description}"></span>
                             <br>
                             <span class="text-desc index-state">
-                                <span class="glyphicon glyphicon-leaf"></span>
+                                <span class="glyphicon glyphicon-comment"></span>
                                 <span th:text="${question.commentCount}"></span>个回复&nbsp;&nbsp;&nbsp;
                                 <span class="glyphicon glyphicon-eye-open"></span>
                                 <span th:text="${question.viewCount}"></span>个浏览&nbsp;&nbsp;&nbsp;
-                                <span class="glyphicon glyphicon-time"></span>
                                 <span th:text="${#dates.format(question.gmtCreate,'yyyy-MM-dd HH:mm')}"></span></span>
                         </div>
                         <hr>
@@ -130,7 +128,7 @@
 
         </div>
         <!--右边布局 热门话题-->
-        <div class="col-lg-3 col-md-3 hidden-xs hidden-sm jumbotron">
+        <div class="col-lg-3 col-md-3 hidden-xs hidden-sm index-leftPlace">
             <h2>知猿社区</h2>
 <!--            <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">-->
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 media">
