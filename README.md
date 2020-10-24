@@ -1,5 +1,21 @@
 ## 知猿社区
 
+## 部署
+## 依赖
+- Git
+- JDK
+- Maven
+- MySQL
+
+## 步骤
+- yum update
+- yun install git
+- mkdir App
+- cd App
+- clone git https://github.com/slsher/programmerCommunity.git
+- yum isntall maven
+- mvn -v
+- mvn clean compile package
 
 
 ## 资料

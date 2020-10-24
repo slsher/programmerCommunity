@@ -36,6 +36,51 @@ public class QuestionService {
     @Autowired
     public UserMapper userMapper;
 
+    public PaginationDTO AdminList(Long userId, Integer page, Integer size) {
+        PaginationDTO paginationDTO = new PaginationDTO();
+        QuestionExample questionExample = new QuestionExample();
+        questionExample.createCriteria()
+                .andCreatorEqualTo(userId);
+        Integer totalCount = (int) questionMapper.countByExample(questionExample);
+        Integer totalPage;
+        if (totalCount % size == 0) {
+            // 如果等于0
+            totalPage = totalCount / size;
+        } else {
+            // 如果不等于0
+            totalPage = totalCount / size + 1;
+        }
+
+
+        //没有页数的处理
+        if (page < 1) {
+            page = 1;
+        }
+        if (page > totalPage) {
+            page = totalPage;
+        }
+
+        paginationDTO.setPagination(totalPage, page);
+        // 计算页面公式 size*(page-1)
+        Integer offset = size * (page - 1);
+        //QuestionService里面查询Question 同时循环查询user 赋值
+        QuestionExample example = new QuestionExample();
+        example.createCriteria()
+                .andCreatorEqualTo(userId);
+        List<Question> questions = questionMapper.selectByExampleWithRowbounds(example, new RowBounds(offset, size));
+        List<QuestionDTO> questionDTOList = new ArrayList<>();
+
+        for (Question question : questions) {
+            User user = userMapper.selectByPrimaryKey(question.getCreator());
+            QuestionDTO questionDTO = new QuestionDTO();
+            BeanUtils.copyProperties(question, questionDTO);
+            questionDTO.setUser(user);
+            questionDTOList.add(questionDTO);
+        }
+        paginationDTO.setData(questionDTOList);
+        return paginationDTO;
+    }
+
     public PaginationDTO list(String search,Integer page, Integer size) {
 
         if (StringUtils.isNotBlank(search)) {
