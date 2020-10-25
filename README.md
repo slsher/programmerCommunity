@@ -1,5 +1,11 @@
 ## 知猿社区
 
+## 运行步骤
+mvn
+mvn flyway:migrate -Pdev
+mvn clean compile package
+java -jar target/community-0.0.1-SNAPSHOT.jar
+
 ## 部署
 ## 依赖
 - Git
