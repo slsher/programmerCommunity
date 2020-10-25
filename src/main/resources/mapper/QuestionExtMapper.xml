@@ -51,4 +51,7 @@
         </where>
         order by gmt_create desc limit #{page},#{size}
     </select>
+    <delete id="deleteById" parameterType="life.zhiyuan.community.community.model.Question" >
+delete from QUESTION where ID = #{id}
+    </delete>
 </mapper>

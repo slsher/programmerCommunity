@@ -13,6 +13,8 @@ public interface QuestionExtMapper {
 
     int incCommentCount(Question record);
 
+    int deleteById(Question record);
+
     List<Question> selectRelated(Question question);
 
     Integer countBySearch(QuestionQueryDTO questionQueryDTO);

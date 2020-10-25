@@ -153,6 +153,3 @@ function selectTag(e) {
 
 /** 后台控制管理器*/
 
-function dd(user){
-    alert(user)
-}

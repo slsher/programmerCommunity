@@ -1,5 +1,6 @@
 package life.zhiyuan.community.community.controller;
 
+import life.zhiyuan.community.community.cache.TagCache;
 import life.zhiyuan.community.community.dto.CommentDTO;
 import life.zhiyuan.community.community.dto.PaginationDTO;
 import life.zhiyuan.community.community.dto.QuestionDTO;
@@ -43,6 +44,8 @@ public class AdminController {
         PaginationDTO pagination = questionService.AdminList(user.getId(), page, size);
 
 
+
+
         model.addAttribute("pagination", pagination);
         model.addAttribute("search", search);
 
@@ -51,6 +54,14 @@ public class AdminController {
         model.addAttribute("section", "replies");
         model.addAttribute("paginations", paginationDTO);
         model.addAttribute("sectionName", "通知中心");
+
+        return "admin";
+    }
+    @GetMapping("/admin/{id}")
+    public String edit(@PathVariable(name = "id")Long id,
+                       Model model){
+        //删除问题
+        questionService.deleteById(id);
 
         return "admin";
     }
