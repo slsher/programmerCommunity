@@ -12,6 +12,11 @@ body {
     background-color: white;
 }
 
+.admin-btn-operation{
+    background: #fff;
+    margin-top: -5px;
+    margin-left: 3px;
+}
 .btn-publish {
     float: right;
     margin-bottom: 15px;
