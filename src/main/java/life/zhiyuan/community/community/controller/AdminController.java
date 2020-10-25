@@ -4,6 +4,7 @@ import life.zhiyuan.community.community.cache.TagCache;
 import life.zhiyuan.community.community.dto.CommentDTO;
 import life.zhiyuan.community.community.dto.PaginationDTO;
 import life.zhiyuan.community.community.dto.QuestionDTO;
+import life.zhiyuan.community.community.dto.ResultDTO;
 import life.zhiyuan.community.community.enums.CommentTypeEnum;
 import life.zhiyuan.community.community.model.User;
 import life.zhiyuan.community.community.service.CommentService;
@@ -12,9 +13,7 @@ import life.zhiyuan.community.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -32,6 +31,7 @@ public class AdminController {
 
     @Autowired
     private NotificationService notificationService;
+
     @GetMapping("/admin")
     public String index(Model model,
                         HttpServletRequest request,
@@ -44,26 +44,26 @@ public class AdminController {
         PaginationDTO pagination = questionService.AdminList(user.getId(), page, size);
 
 
-
-
         model.addAttribute("pagination", pagination);
         model.addAttribute("search", search);
 
-        PaginationDTO paginationDTO=notificationService.list(user.getId(), page, size);
-        Long unreadCount=notificationService.unreadCount(user.getId());
+        PaginationDTO paginationDTO = notificationService.list(user.getId(), page, size);
+        Long unreadCount = notificationService.unreadCount(user.getId());
         model.addAttribute("section", "replies");
         model.addAttribute("paginations", paginationDTO);
         model.addAttribute("sectionName", "通知中心");
 
         return "admin";
     }
-    @GetMapping("/admin/{id}")
-    public String edit(@PathVariable(name = "id")Long id,
-                       Model model){
+
+    @ResponseBody
+    @RequestMapping(value = "/admin/{id}", method = RequestMethod.GET)
+    public Object edit(@PathVariable(name = "id") Long id,
+                       Model model) {
         //删除问题
         questionService.deleteById(id);
 
-        return "admin";
+        return ResultDTO.okof();
     }
 
 }
