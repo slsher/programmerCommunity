@@ -15,7 +15,7 @@ java -jar target/community-0.0.1-SNAPSHOT.jar
 
 ## 步骤
 - yum update
-- yun install git
+- yum install git
 - mkdir App
 - cd App
 - clone git https://github.com/slsher/programmerCommunity.git
