@@ -37,7 +37,7 @@ public class FileController {
         }
         FileDTO fileDTO = new FileDTO();
         fileDTO.setSuccess(1);
-        fileDTO.setUrl("/images/wechat.png");
+        fileDTO.setUrl("/images/wechat1.png");
         return fileDTO;
     }
 }
