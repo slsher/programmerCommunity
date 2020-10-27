@@ -32,49 +32,59 @@ public class AdminController {
     @Autowired
     private NotificationService notificationService;
 
-    @GetMapping("/admin")
+    @GetMapping("/admin/{action}")
     public String index(Model model,
                         HttpServletRequest request,
                         //计算页数 接受传入的参数
                         @RequestParam(name = "page", defaultValue = "1") Integer page,
                         @RequestParam(name = "size", defaultValue = "10") Integer size,
-                        @RequestParam(name = "search", required = false) String search) {
+                        @RequestParam(name = "search", required = false) String search,
+                        @PathVariable(name = "action") String action) {
 
         User user = (User) request.getSession().getAttribute("user");
-        PaginationDTO pagination = questionService.AdminList(user.getId(), page, size);
-        PaginationDTO paginationComment = commentService.AdminList(user.getId(), page, size);
 
-        model.addAttribute("paginationComment",paginationComment);
-        model.addAttribute("pagination", pagination);
+
+
+
+
         model.addAttribute("search", search);
 
-        PaginationDTO paginationDTO = notificationService.list(user.getId(), page, size);
-        Long unreadCount = notificationService.unreadCount(user.getId());
-        model.addAttribute("section", "replies");
-        model.addAttribute("paginations", paginationDTO);
-        model.addAttribute("sectionName", "通知中心");
+
+
+        if ("questions".equals(action)){
+            model.addAttribute("section", "questions");
+            PaginationDTO pagination = questionService.AdminList(user.getId(), page, size);
+            model.addAttribute("pagination", pagination);
+        }else if ("comments".equals(action)){
+            model.addAttribute("section", "comments");
+            PaginationDTO paginationComment = commentService.AdminList(user.getId(), page, size);
+            model.addAttribute("paginationComment",paginationComment);
+        }else if ("notification".equals(action)){
+            model.addAttribute("section", "notification");
+            PaginationDTO paginationDTO = notificationService.list(user.getId(), page, size);
+            model.addAttribute("paginations", paginationDTO);
+        }else {
+            model.addAttribute("section", "users");
+        }
 
         return "admin";
     }
 
-    @ResponseBody
-    @RequestMapping(value = "/admin/{action}/{id}", method = RequestMethod.GET)
+    @GetMapping(value = "/admin/{action}/{id}")
     public Object questionEdit(@PathVariable(name = "id") Long id,
                                @PathVariable(name = "action") String action) {
 
-        if ("question".equals(action)) {
+        if ("questions".equals(action)) {
             //删除帖子
             questionService.deleteByQuestionId(id);
-        } else if ("comment".equals(action)) {
+        } else if ("comments".equals(action)) {
             //删除评论
             commentService.deleteByCommentId(id);
         }else if ("notification".equals(action)){
             //删除通知
             notificationService.deleteByNotification(id);
         }
-
-
-        return ResultDTO.okof();
+         return "redirect:/admin/"+action;
     }
 
 }

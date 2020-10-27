@@ -126,23 +126,39 @@
 <div class="pg_content">
     <!--左侧标签-->
     <div class="menu">
-        <ul class="nav nav-pills nav-stacked" role="tablist">
-            <li role="presentation" class="active"><a href="#user" aria-controls="user" role="tab" data-toggle="tab">用户管理</a>
-            </li>
-            <li role="presentation"><a href="#question" aria-controls="profile" role="tab" data-toggle="tab">帖子管理</a>
-            </li>
-            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">评论管理</a>
-            </li>
-            <li role="presentation"><a href="#notifier" aria-controls="notifier" role="tab" data-toggle="tab">通知管理</a>
-            </li>
-        </ul>
+<!--        <ul class="nav nav-pills nav-stacked section" role="tablist">-->
+<!--            <li role="presentation"><a href="#user" aria-controls="user" role="tab" data-toggle="tab">用户管理</a>-->
+<!--            </li>-->
+<!--            <li role="presentation"-->
+<!--                th:classappend="${section == 'questions'} ? 'active list-group-item' : 'list-group-item' "><a-->
+<!--                    href="/admin/questions" aria-controls="profile" role="tab" data-toggle="tab">帖子管理</a>-->
+<!--            </li>-->
+<!--            <li role="presentation"-->
+<!--                th:classappend="${section == 'comments'} ? 'active list-group-item' : 'list-group-item' "><a href="/admin/comments" aria-controls="messages"-->
+<!--                                                                         role="tab" data-toggle="tab">评论管理</a>-->
+<!--            </li>-->
+<!--            <li role="presentation"><a href="#notifier" aria-controls="notifier" role="tab" data-toggle="tab">通知管理</a>-->
+<!--            </li>-->
+<!--        </ul>-->
+        <div class="list-group section">
+            <a href="/admin/users"
+               th:classappend="${section == 'users'} ? 'active list-group-item' : 'list-group-item' ">用户管理</a>
+            <a href="/admin/questions"
+               th:classappend="${section == 'questions'} ? 'active list-group-item' : 'list-group-item' ">帖子管理</a>
+            <a href="/admin/comments"
+               th:classappend="${section == 'comments'} ? 'active list-group-item' : 'list-group-item' ">评论管理</span>
+            </a>
+            <a href="/admin/notification"
+               th:classappend="${section == 'notification'} ? 'active list-group-item' : 'list-group-item' ">通知管理</span>
+            </a>
+        </div>
     </div>
     <!--右侧内容-->
     <div class="content">
         <div class="tab-content">
             <!--用户管理-->
-            <div role="tabpanel" class="tab-pane active" id="user">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12">
+            <div th:if="${section=='users'}">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12"  >
                     <table class="table table-hover">
                         <thead>
                         <th>ID</th>
@@ -176,44 +192,9 @@
                         </tbody>
                     </table>
                 </div>
-                <div style="display: none">
-                    <!--页数-->
-                    <!--                <nav aria-label="Page navigation">-->
-                    <!--                    <ul class="pagination">-->
-                    <!--                        &lt;!&ndash;第一页&ndash;&gt;-->
-                    <!--                        <li th:if="${pagination.showFirstPage}">-->
-                    <!--                            <a th:href="@{/admin/(page=${1})}" aria-label="Previous">-->
-                    <!--                                <span aria-hidden="true">&lt;&lt;</span>-->
-                    <!--                            </a>-->
-                    <!--                        </li>-->
-                    <!--                        &lt;!&ndash;上一页&ndash;&gt;-->
-                    <!--                        <li th:if="${pagination.showPrevious}">-->
-                    <!--                            <a th:href="@{/admin/(page=${pagination.page -1})}" aria-label="Previous">-->
-                    <!--                                <span aria-hidden="true">&lt;</span>-->
-                    <!--                            </a>-->
-                    <!--                        </li>-->
-                    <!--                        &lt;!&ndash;当前页&ndash;&gt;-->
-                    <!--                        <li th:each="page : ${pagination.pages}" th:class="${pagination.page == page} ? 'active' : '' ">-->
-                    <!--                            <a th:href="@{/admin/(page=${page})}" th:text="${page}"></a>-->
-                    <!--                        </li>-->
-                    <!--                        &lt;!&ndash;下一页&ndash;&gt;-->
-                    <!--                        <li th:if="${pagination.showNext}">-->
-                    <!--                            <a th:href="@{/admin/(page=${pagination.page +1})}" aria-label="Next">-->
-                    <!--                                <span aria-hidden="true">&gt;</span>-->
-                    <!--                            </a>-->
-                    <!--                        </li>-->
-                    <!--                        &lt;!&ndash;最后一页&ndash;&gt;-->
-                    <!--                        <li th:if="${pagination.showEndPage}">-->
-                    <!--                            <a th:href="@{/admin/(page=${pagination.totalPage})}" aria-label="Next">-->
-                    <!--                                <span aria-hidden="true">&gt;&gt;</span>-->
-                    <!--                            </a>-->
-                    <!--                        </li>-->
-                    <!--                    </ul>-->
-                    <!--                </nav>-->
-                </div>
             </div>
             <!--帖子管理-->
-            <div role="tabpanel" class="tab-pane" id="question">
+            <div  th:if="${section == 'questions'}">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12">
                     <table class="table table-hover">
                         <thead>
@@ -242,7 +223,7 @@
                                 <a class="btn btn-default btn-sm admin-btn-operation"
                                    th:href="@{'/question/'+${question.id}}" role="button">链接</a>
                                 <a class="btn btn-danger btn-sm admin-btn-operation"
-                                   th:href="@{'/admin/question/'+${question.id}}"
+                                   th:href="@{'/admin/questions/'+${question.id}}"
                                    style="background: red">删除</a>
                             </td>
                         </tr>
@@ -252,7 +233,7 @@
                 </div>
             </div>
             <!--评论管理-->
-            <div role="tabpanel" class="tab-pane" id="messages">
+            <div  th:if="${section == 'comments'}">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12">
                     <table class="table table-hover">
                         <thead>
@@ -278,7 +259,7 @@
                                 <a class="btn btn-default btn-sm admin-btn-operation"
                                    th:href="@{'/question/'+${comment.parentId}}" role="button">链接</a>
                                 <a class="btn btn-danger btn-sm admin-btn-operation"
-                                   th:href="@{'/admin/comment/'+${comment.id}}"
+                                   th:href="@{'/admin/comments/'+${comment.id}}"
                                    style="background: red">删除</a>
                             </th>
                         </tr>
@@ -287,7 +268,7 @@
                 </div>
             </div>
             <!--通知管理-->
-            <div role="tabpanel" class="tab-pane" id="notifier">
+            <div th:if="${section=='notification'}">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12">
                     <table class="table table-hover">
                         <thead>
