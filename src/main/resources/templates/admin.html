@@ -269,17 +269,16 @@
                         <th>操作</th>
                         </thead>
                         <tbody>
-                        <tr th:each="notification : ${paginations.data}">
+                        <tr th:each="notification : ${paginationComment.data}">
                             <th th:text="${notification.id}"></th>
-                            <th th:text="${notification.notifier}"></th>
-                            <th th:text="${notification.notifierName}"></th>
-                            <th th:text="${notification.outerTitle}"></th>
-                            <th th:text="${notification.outerid}"></th>
-                            <th>
-                                <span th:if="${notification.status}!=0">是</span>
-                                <span th:if="${notification.status}==0">否</span>
-                            </th>
+                            <th th:text="${notification.parentId}"></th>
+                            <th th:text="${notification.type}"></th>
+                            <th th:text="${notification.commentCount}"></th>
+                            <th th:text="${notification.content}"></th>
+                            <th th:text="${notification.user}"></th>
+
                             <th th:text="${#dates.format(notification.gmtCreate,'yyyy-MM-dd HH:mm')}"></th>
+                            <th th:text="${#dates.format(notification.gmtModified,'yyyy-MM-dd HH:mm')}"></th>
                             <th th:text="${notification.type}"></th>
                             <th>
                                 <a class="btn btn-default btn-sm admin-btn-operation"
@@ -290,7 +289,7 @@
                     </table>
                 </div>
             </div>
-            <!--评论管理-->
+            <!--通知管理-->
             <div role="tabpanel" class="tab-pane" id="notifier">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12">
                     <table class="table table-hover">

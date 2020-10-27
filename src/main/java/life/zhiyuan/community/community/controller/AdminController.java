@@ -42,8 +42,9 @@ public class AdminController {
 
         User user = (User) request.getSession().getAttribute("user");
         PaginationDTO pagination = questionService.AdminList(user.getId(), page, size);
+        PaginationDTO paginationComment = commentService.AdminList(user.getId(), page, size);
 
-
+        model.addAttribute("paginationComment",paginationComment);
         model.addAttribute("pagination", pagination);
         model.addAttribute("search", search);
 

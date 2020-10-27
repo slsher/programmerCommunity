@@ -3,6 +3,7 @@
 <head>
     <title>知猿社区</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/nodeModules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/nodeModules/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/nodeModules/css/community.css">
@@ -12,12 +13,16 @@
 <body>
 
 <div th:insert="~{navigation :: nav}"></div>
-
-<div class="jumbotron">
-    <h1>出错了</h1>
-    <p th:text="${message}">服务器太热了，请稍后再次尝试w(ﾟДﾟ)w</p>
-    <p><a class="btn btn-primary btn-lg" href="/" role="button">回到主页</a></p>
+<div class="container main">
+    <div class="row text-center">
+        <h1>出错了</h1>
+        <p th:text="${message}">服务器太热了，请稍后再次尝试w(ﾟДﾟ)w</p>
+        <p><a class="btn btn-primary btn-lg" href="/" role="button">回到主页</a></p>
+    </div>
 </div>
+<!--<div class="jumbotron">-->
+
+<!--</div>-->
 <!--底部-->
 <div th:insert="~{footer :: foot}"></div>
 </body>

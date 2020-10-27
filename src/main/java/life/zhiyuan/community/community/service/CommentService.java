@@ -1,6 +1,8 @@
 package life.zhiyuan.community.community.service;
 
 import life.zhiyuan.community.community.dto.CommentDTO;
+import life.zhiyuan.community.community.dto.PaginationDTO;
+import life.zhiyuan.community.community.dto.QuestionDTO;
 import life.zhiyuan.community.community.enums.CommentTypeEnum;
 import life.zhiyuan.community.community.enums.NotificationStatusEnum;
 import life.zhiyuan.community.community.enums.NotificationTypeEnum;
@@ -8,6 +10,7 @@ import life.zhiyuan.community.community.exception.CustomizeErrorCode;
 import life.zhiyuan.community.community.exception.CustomizeException;
 import life.zhiyuan.community.community.mapper.*;
 import life.zhiyuan.community.community.model.*;
+import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -42,6 +45,9 @@ public class CommentService {
 
     @Autowired
     private NotificationMapper notificationMapper;
+
+    @Autowired
+    private CommentMapper commentService;
     @Transactional
     public void insert(Comment comment, User commentator) {
         if (comment.getParentId() == null || comment.getParentId() == 0) {
@@ -137,5 +143,49 @@ public class CommentService {
         }).collect(Collectors.toList());
 
         return commentDTOS;
+    }
+    public PaginationDTO AdminList(Long userId, Integer page, Integer size) {
+        PaginationDTO paginationDTO = new PaginationDTO();
+        CommentExample commentExample = new CommentExample();
+        commentExample.createCriteria()
+                .andCommentatorEqualTo(userId);
+        Integer totalCount = (int) commentService.countByExample(commentExample);
+        Integer totalPage;
+        if (totalCount % size == 0) {
+            // 如果等于0
+            totalPage = totalCount / size;
+        } else {
+            // 如果不等于0
+            totalPage = totalCount / size + 1;
+        }
+
+
+        //没有页数的处理
+        if (page < 1) {
+            page = 1;
+        }
+        if (page > totalPage) {
+            page = totalPage;
+        }
+
+        paginationDTO.setPagination(totalPage, page);
+        // 计算页面公式 size*(page-1)
+        Integer offset = size * (page - 1);
+        //QuestionService里面查询Question 同时循环查询user 赋值
+        CommentExample example = new CommentExample();
+        example.createCriteria()
+                .andCommentatorEqualTo(userId);
+        List<Comment> questions = commentMapper.selectByExampleWithRowbounds(example, new RowBounds(offset, size));
+        List<CommentDTO> commentDTOList = new ArrayList<>();
+
+        for (Comment comment : questions) {
+            User user = userMapper.selectByPrimaryKey(comment.getCommentator());
+            CommentDTO commentDTO = new CommentDTO();
+            BeanUtils.copyProperties(comment, commentDTO);
+            commentDTO.setUser(user);
+            commentDTOList.add(commentDTO);
+        }
+        paginationDTO.setData(commentDTOList);
+        return paginationDTO;
     }
 }
