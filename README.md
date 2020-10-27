@@ -13,6 +13,8 @@ java -jar target/community-0.0.1-SNAPSHOT.jar
 - Maven
 - MySQL
 
+more src/main/resources/application-production.properties
+vim src/main/resources/application-production.properties
 ## 步骤
 - yum update
 - yum install git
@@ -22,7 +24,29 @@ java -jar target/community-0.0.1-SNAPSHOT.jar
 - yum isntall maven
 - mvn -v
 - mvn clean compile package
+- cp src/main/resources/application.properties src/main/resources/application-production.properties
+- vim package
+- java -jar -Dspring.profiles.active=production target/community-0.0.1-SNAPSHOT.jar
 
+## 本地运行手册
+1. 安装必备工具  
+JDK，Maven
+2. 克隆代码到本地
+```sh
+git clone https://github.com/codedrinker/community.git
+````
+3. 运行打包命令
+```sh
+mvn package
+```
+4. 运行项目  
+```sh
+java -jar target/community-0.0.1-SNAPSHOT.jar
+```
+5. 访问项目
+```
+http://localhost:8887
+```
 
 ## 资料
 * [spring文档](https://spring.io/guides)

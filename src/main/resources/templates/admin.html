@@ -133,6 +133,8 @@
             </li>
             <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">评论管理</a>
             </li>
+            <li role="presentation"><a href="#notifier" aria-controls="notifier" role="tab" data-toggle="tab">通知管理</a>
+            </li>
         </ul>
     </div>
     <!--右侧内容-->
@@ -253,6 +255,43 @@
             </div>
             <!--评论管理-->
             <div role="tabpanel" class="tab-pane" id="messages">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12">
+                    <table class="table table-hover">
+                        <thead>
+                        <th>ID</th>
+                        <th>评论人ID</th>
+                        <th>评论人</th>
+                        <th>评论帖子</th>
+                        <th>发帖人ID</th>
+                        <th>评论是否已经被查看</th>
+                        <th>评论发布时间</th>
+                        <th>评论浏览次数</th>
+                        <th>操作</th>
+                        </thead>
+                        <tbody>
+                        <tr th:each="notification : ${paginations.data}">
+                            <th th:text="${notification.id}"></th>
+                            <th th:text="${notification.notifier}"></th>
+                            <th th:text="${notification.notifierName}"></th>
+                            <th th:text="${notification.outerTitle}"></th>
+                            <th th:text="${notification.outerid}"></th>
+                            <th>
+                                <span th:if="${notification.status}!=0">是</span>
+                                <span th:if="${notification.status}==0">否</span>
+                            </th>
+                            <th th:text="${#dates.format(notification.gmtCreate,'yyyy-MM-dd HH:mm')}"></th>
+                            <th th:text="${notification.type}"></th>
+                            <th>
+                                <a class="btn btn-default btn-sm admin-btn-operation"
+                                   th:href="@{'/notification/'+${notification.id}}" role="button">链接</a>
+                            </th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--评论管理-->
+            <div role="tabpanel" class="tab-pane" id="notifier">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12">
                     <table class="table table-hover">
                         <thead>

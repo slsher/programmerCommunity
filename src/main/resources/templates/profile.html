@@ -14,10 +14,10 @@
 <!--顶部-->
 <div th:insert="~{navigation :: nav}"></div>
 <!--内容-->
-<div class="container-fluid main profile">
+<div class="container main profile">
     <div class="row">
         <!--帖子列表-->
-        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" style="border-right:1px solid #DDDDDD;">
             <h2><span th:text="${sectionName}"></span></h2>
             <hr>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" th:if="${section == 'questions'}">
@@ -95,7 +95,7 @@
             </div>
         </div>
         <!--热门话题-->
-        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
             <div class="list-group section">
                 <a href="/profile/questions"
                    th:classappend="${section == 'questions'} ? 'active list-group-item' : 'list-group-item' ">我的提问</a>
@@ -108,6 +108,7 @@
     </div>
 </div>
 <!--底部-->
-<div th:insert="~{footer :: foot}"></div></body>
+<div th:insert="~{footer :: foot}"></div>
+</body>
 
 </html>
