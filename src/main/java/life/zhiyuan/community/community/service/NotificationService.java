@@ -6,6 +6,7 @@ import life.zhiyuan.community.community.enums.NotificationStatusEnum;
 import life.zhiyuan.community.community.enums.NotificationTypeEnum;
 import life.zhiyuan.community.community.exception.CustomizeErrorCode;
 import life.zhiyuan.community.community.exception.CustomizeException;
+import life.zhiyuan.community.community.mapper.NotificationExtMapper;
 import life.zhiyuan.community.community.mapper.NotificationMapper;
 import life.zhiyuan.community.community.mapper.UserMapper;
 import life.zhiyuan.community.community.model.Notification;
@@ -28,6 +29,8 @@ public class NotificationService {
     @Autowired
     private NotificationMapper notificationMapper;
 
+    @Autowired
+    private NotificationExtMapper notificationExtMapper;
 
     public PaginationDTO list(Long userId, Integer page, Integer size) {
         PaginationDTO<NotificationDTO> paginationDTO = new PaginationDTO<>();
@@ -106,5 +109,12 @@ public class NotificationService {
         BeanUtils.copyProperties(notification, notificationDTO);
         notificationDTO.setTypeName(NotificationTypeEnum.nameOfType(notification.getType()));
         return notificationDTO;
+    }
+
+    public void deleteByNotification(Long id) {
+        Notification notification=new Notification();
+        notification.setId(id);
+        notificationExtMapper.deleteByNotificationId(notification);
+
     }
 }

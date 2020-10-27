@@ -58,11 +58,21 @@ public class AdminController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/admin/{id}", method = RequestMethod.GET)
-    public Object edit(@PathVariable(name = "id") Long id,
-                       Model model) {
-        //删除问题
-        questionService.deleteById(id);
+    @RequestMapping(value = "/admin/{action}/{id}", method = RequestMethod.GET)
+    public Object questionEdit(@PathVariable(name = "id") Long id,
+                               @PathVariable(name = "action") String action) {
+
+        if ("question".equals(action)) {
+            //删除帖子
+            questionService.deleteByQuestionId(id);
+        } else if ("comment".equals(action)) {
+            //删除评论
+            commentService.deleteByCommentId(id);
+        }else if ("notification".equals(action)){
+            //删除通知
+            notificationService.deleteByNotification(id);
+        }
+
 
         return ResultDTO.okof();
     }

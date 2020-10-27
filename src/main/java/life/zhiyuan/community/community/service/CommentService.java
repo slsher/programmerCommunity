@@ -188,4 +188,16 @@ public class CommentService {
         paginationDTO.setData(commentDTOList);
         return paginationDTO;
     }
+
+
+//    public void deleteByCommentId(Long id) {
+//        Comment comment=new Comment();
+//        comment.setId(id);
+//        CommentExtMapper.deleteByCommentId(comment);
+//    }
+    public void deleteByCommentId(Long id){
+       Comment comment=new Comment();
+       comment.setId(id);
+       commentExtMapper.deleteByCommentId(comment);
+    }
 }

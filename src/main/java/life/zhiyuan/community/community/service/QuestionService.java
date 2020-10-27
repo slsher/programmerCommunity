@@ -223,10 +223,10 @@ public class QuestionService {
         questionExtMapper.incView(question);
     }
 
-    public void deleteById(Long id){
+    public void deleteByQuestionId(Long id){
         Question question=new Question();
         question.setId(id);
-        questionExtMapper.deleteById(question);
+        questionExtMapper.deleteByQuestionId(question);
     }
     public List<QuestionDTO> selectRelated(QuestionDTO queryDTO) {
         if (StringUtils.isBlank(queryDTO.getTag())) {

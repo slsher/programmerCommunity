@@ -127,7 +127,7 @@
     <!--左侧标签-->
     <div class="menu">
         <ul class="nav nav-pills nav-stacked" role="tablist">
-            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">用户管理</a>
+            <li role="presentation" class="active"><a href="#user" aria-controls="user" role="tab" data-toggle="tab">用户管理</a>
             </li>
             <li role="presentation"><a href="#question" aria-controls="profile" role="tab" data-toggle="tab">帖子管理</a>
             </li>
@@ -141,7 +141,7 @@
     <div class="content">
         <div class="tab-content">
             <!--用户管理-->
-            <div role="tabpanel" class="tab-pane active" id="home">
+            <div role="tabpanel" class="tab-pane active" id="user">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12">
                     <table class="table table-hover">
                         <thead>
@@ -170,8 +170,6 @@
                             <td>
                                 <a class="btn btn-default btn-sm admin-btn-operation" href="#" role="button">Link</a>
                                 <a class="btn btn-default btn-sm admin-btn-operation" href="#" role="button">Link</a>
-                                <a class="btn btn-danger btn-sm admin-btn-operation" href="#" role="button"
-                                   style="background: red">Link</a>
                             </td>
                         </tr>
 
@@ -244,7 +242,7 @@
                                 <a class="btn btn-default btn-sm admin-btn-operation"
                                    th:href="@{'/question/'+${question.id}}" role="button">链接</a>
                                 <a class="btn btn-danger btn-sm admin-btn-operation"
-                                   th:href="@{'/admin/'+${question.id}}"
+                                   th:href="@{'/admin/question/'+${question.id}}"
                                    style="background: red">删除</a>
                             </td>
                         </tr>
@@ -259,30 +257,29 @@
                     <table class="table table-hover">
                         <thead>
                         <th>ID</th>
-                        <th>评论人ID</th>
+                        <th>问题帖子ID</th>
+                        <th>一级/二级评论</th>
                         <th>评论人</th>
-                        <th>评论帖子</th>
-                        <th>发帖人ID</th>
-                        <th>评论是否已经被查看</th>
-                        <th>评论发布时间</th>
-                        <th>评论浏览次数</th>
+                        <th>评论时间</th>
+                        <th>评论内容</th>
+                        <th>该评论的二级评论数</th>
                         <th>操作</th>
                         </thead>
                         <tbody>
-                        <tr th:each="notification : ${paginationComment.data}">
-                            <th th:text="${notification.id}"></th>
-                            <th th:text="${notification.parentId}"></th>
-                            <th th:text="${notification.type}"></th>
-                            <th th:text="${notification.commentCount}"></th>
-                            <th th:text="${notification.content}"></th>
-                            <th th:text="${notification.user}"></th>
-
-                            <th th:text="${#dates.format(notification.gmtCreate,'yyyy-MM-dd HH:mm')}"></th>
-                            <th th:text="${#dates.format(notification.gmtModified,'yyyy-MM-dd HH:mm')}"></th>
-                            <th th:text="${notification.type}"></th>
+                        <tr th:each="comment : ${paginationComment.data}">
+                            <th th:text="${comment.id}"></th>
+                            <th th:text="${comment.parentId}"></th>
+                            <th th:text="${comment.type}"></th>
+                            <th th:text="${comment.commentator}"></th>
+                            <th th:text="${#dates.format(comment.gmtCreate,'yyyy-MM-dd HH:mm')}"></th>
+                            <th th:text="${comment.content}"></th>
+                            <th th:text="${comment.commentCount}"></th>
                             <th>
                                 <a class="btn btn-default btn-sm admin-btn-operation"
-                                   th:href="@{'/notification/'+${notification.id}}" role="button">链接</a>
+                                   th:href="@{'/question/'+${comment.parentId}}" role="button">链接</a>
+                                <a class="btn btn-danger btn-sm admin-btn-operation"
+                                   th:href="@{'/admin/comment/'+${comment.id}}"
+                                   style="background: red">删除</a>
                             </th>
                         </tr>
                         </tbody>
@@ -320,6 +317,9 @@
                             <th>
                                 <a class="btn btn-default btn-sm admin-btn-operation"
                                    th:href="@{'/notification/'+${notification.id}}" role="button">链接</a>
+                                <a class="btn btn-danger btn-sm admin-btn-operation"
+                                   th:href="@{'/admin/notification/'+${notification.id}}"
+                                   style="background: red">删除</a>
                             </th>
                         </tr>
                         </tbody>
