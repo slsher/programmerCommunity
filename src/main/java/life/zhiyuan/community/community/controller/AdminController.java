@@ -50,6 +50,10 @@ public class AdminController {
         model.addAttribute("search", search);
 
 
+        if (!user.getName().equals("slsher")){
+            return "redirect:/";
+        }
+
 
         if ("questions".equals(action)){
             model.addAttribute("section", "questions");

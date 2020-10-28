@@ -190,11 +190,7 @@ public class CommentService {
     }
 
 
-//    public void deleteByCommentId(Long id) {
-//        Comment comment=new Comment();
-//        comment.setId(id);
-//        CommentExtMapper.deleteByCommentId(comment);
-//    }
+
     public void deleteByCommentId(Long id){
        Comment comment=new Comment();
        comment.setId(id);

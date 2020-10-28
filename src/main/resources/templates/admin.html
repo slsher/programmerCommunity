@@ -184,7 +184,9 @@
                             <td th:text="${session.user.getAvatarUrl()}"></td>
                             <td th:text="${session.user.getBio()}"></td>
                             <td>
-                                <a class="btn btn-default btn-sm admin-btn-operation" href="#" role="button">Link</a>
+                                <a class="btn btn-danger btn-sm admin-btn-operation"
+                                   th:href="@{'/admin/users/'+${session.user.getId()}}"
+                                   style="background: red">删除</a>
                                 <a class="btn btn-default btn-sm admin-btn-operation" href="#" role="button">Link</a>
                             </td>
                         </tr>
