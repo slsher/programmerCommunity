@@ -23,9 +23,9 @@ vim src/main/resources/application-production.properties
 - clone git https://github.com/slsher/programmerCommunity.git
 - yum isntall maven
 - mvn -v
-- mvn clean compile package
+- mvn clean  compile package
 - cp src/main/resources/application.properties src/main/resources/application-production.properties
-- vim package
+- mvn package
 - java -jar -Dspring.profiles.active=production target/community-0.0.1-SNAPSHOT.jar
 
 ## 本地运行手册
