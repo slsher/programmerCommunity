@@ -18,6 +18,9 @@
     <result column="OUTER_TITLE" jdbcType="VARCHAR" property="outerTitle" />
   </resultMap>
   <delete id="deleteByNotificationId" parameterType="life.zhiyuan.community.community.model.Notification" >
-delete from NOTIFICATION where ID = #{id}
+        delete from NOTIFICATION where ID = #{id}
+    </delete>
+  <delete id="deleteByNotifier" parameterType="life.zhiyuan.community.community.model.Notification" >
+        delete from NOTIFICATION where NOTIFIER= #{notifier}
     </delete>
 </mapper>

@@ -23,6 +23,12 @@
     where id=#{id}
   </update>
   <delete id="deleteByCommentId" parameterType="life.zhiyuan.community.community.model.Comment" >
-delete from COMMENT where ID = #{id}
+    delete from COMMENT where ID = #{id}
+    </delete>
+  <delete id="deleteByCommentator" parameterType="life.zhiyuan.community.community.model.Comment" >
+    delete from COMMENT where COMMENTATOR= #{commentator}
+    </delete>
+  <delete id="deleteByParentId" parameterType="life.zhiyuan.community.community.model.Comment" >
+    delete from COMMENT where PARENT_ID= #{parentId}
     </delete>
 </mapper>

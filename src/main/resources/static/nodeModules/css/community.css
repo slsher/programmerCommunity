@@ -8,6 +8,20 @@ body {
     background: url("/images/bg.jpg") repeat;
 }
 
+.admin-content{
+    padding: 20px 0 100px 10px;
+
+}
+.admin-main{
+    margin: 30px;
+    background-color: white;
+}
+.admin-delete-modal .modal-title{
+    color: red;
+    font-size: 18px;
+    font-weight: 100;
+    margin: 0;
+}
 .main {
     margin: 30px;
     background-color: white;

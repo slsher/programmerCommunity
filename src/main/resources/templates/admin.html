@@ -3,315 +3,299 @@
 <head>
     <title>后台管理</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/nodeModules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/nodeModules/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/nodeModules/css/community.css">
     <script src="/nodeModules/jquery/dist/jquery.min.js"></script>
     <script src="/nodeModules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/nodeModules/js/community.js"></script>
-    <style>
-        body {
-            margin: 0 auto;
-        }
-
-        .left {
-            float: left;
-        }
-
-        .right {
-            float: right;
-        }
-
-        .pg_header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            height: 48px;
-            background-color: #2459a2;
-            color: white;
-            z-index: 10;
-        }
-
-        .pg_header .logo {
-            height: 48px;
-            width: 200px;
-            text-align: center;
-            color: white;
-        }
-
-        .pg_header .logo a img {
-            height: 48px;
-            width: 50px;
-        }
-
-        .pg_header .person_info {
-            position: relative;
-            height: 48px;
-            width: 160px;
-            /*text-align: center;*/
-        }
-
-        .pg_header .person_info img {
-            border: 0;
-            height: 48px;
-            width: 50px;
-            /*使用border-radius可以定义边框的圆角程度*/
-            border-radius: 50%;
-        }
-
-        .pg_header .person_info .info {
-            position: absolute;
-            width: 150px;
-            background-color: cornflowerblue;
-            top: 50px;
-            z-index: 20;
-            display: none;
-        }
-
-        .pg_header .person_info .info a {
-            display: block;
-            color: white;
-        }
-
-        .pg_header .person_info:hover .info {
-            display: block;
-        }
-
-        .pg_header .icons {
-            line-height: 48px;
-            padding: 0 20px 0 5px;
-        }
-
-        .pg_header .icons:hover {
-            background-color: cornflowerblue;
-        }
-
-        .pg_header .icons span {
-            padding: 1px 5px;
-            line-height: 1px;
-            border-radius: 50%;
-            background-color: red;
-            font-size: 12px;
-        }
-
-        .pg_content .menu {
-            position: absolute;
-            top: 50px;
-            left: 0;
-            bottom: 0;
-            width: 200px;
-            background-color: #dddddd;
-        }
-
-        .pg_content .content {
-            position: absolute;
-            top: 50px;
-            right: 0;
-            bottom: 0;
-            left: 202px;
-            background-color: white;
-            overflow: auto;
-            min-width: 980px;
-            z-index: 8;
-        }
-    </style>
 </head>
 <body>
+<!--顶部-->
+<div th:insert="~{navigation :: nav}"></div>
 
-<div class="pg_header">
-    <div th:insert="~{navigation :: nav}"></div>
-</div>
 
 <!--内容-->
-<div class="pg_content">
-    <!--左侧标签-->
-    <div class="menu">
-<!--        <ul class="nav nav-pills nav-stacked section" role="tablist">-->
-<!--            <li role="presentation"><a href="#user" aria-controls="user" role="tab" data-toggle="tab">用户管理</a>-->
-<!--            </li>-->
-<!--            <li role="presentation"-->
-<!--                th:classappend="${section == 'questions'} ? 'active list-group-item' : 'list-group-item' "><a-->
-<!--                    href="/admin/questions" aria-controls="profile" role="tab" data-toggle="tab">帖子管理</a>-->
-<!--            </li>-->
-<!--            <li role="presentation"-->
-<!--                th:classappend="${section == 'comments'} ? 'active list-group-item' : 'list-group-item' "><a href="/admin/comments" aria-controls="messages"-->
-<!--                                                                         role="tab" data-toggle="tab">评论管理</a>-->
-<!--            </li>-->
-<!--            <li role="presentation"><a href="#notifier" aria-controls="notifier" role="tab" data-toggle="tab">通知管理</a>-->
-<!--            </li>-->
-<!--        </ul>-->
-        <div class="list-group section">
-            <a href="/admin/users"
-               th:classappend="${section == 'users'} ? 'active list-group-item' : 'list-group-item' ">用户管理</a>
-            <a href="/admin/questions"
-               th:classappend="${section == 'questions'} ? 'active list-group-item' : 'list-group-item' ">帖子管理</a>
-            <a href="/admin/comments"
-               th:classappend="${section == 'comments'} ? 'active list-group-item' : 'list-group-item' ">评论管理</span>
-            </a>
-            <a href="/admin/notification"
-               th:classappend="${section == 'notification'} ? 'active list-group-item' : 'list-group-item' ">通知管理</span>
-            </a>
+<div class="container-fluid" style="background: white;margin: 0 3%;">
+    <div class="row  admin-content">
+
+        <!--左侧标签-->
+        <div class="col-lg-2 hidden-xs hidden-sm">
+            <div class="list-group section">
+                <a href="/admin/users"
+                   th:classappend="${section == 'users'} ? 'active list-group-item' : 'list-group-item' ">用户管理</a>
+                <a href="/admin/questions"
+                   th:classappend="${section == 'questions'} ? 'active list-group-item' : 'list-group-item' ">帖子管理</a>
+                <a href="/admin/comments"
+                   th:classappend="${section == 'comments'} ? 'active list-group-item' : 'list-group-item' ">评论管理</span>
+                </a>
+                <a href="/admin/notification"
+                   th:classappend="${section == 'notification'} ? 'active list-group-item' : 'list-group-item' ">通知管理</span>
+                </a>
+            </div>
         </div>
-    </div>
-    <!--右侧内容-->
-    <div class="content">
-        <div class="tab-content">
-            <!--用户管理-->
-            <div th:if="${section=='users'}">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12"  >
-                    <table class="table table-hover">
-                        <thead>
-                        <th>ID</th>
-                        <th>用户名</th>
-                        <th>Token</th>
-                        <th>首次登陆状态</th>
-                        <th>最新登陆状态</th>
-                        <th>头像</th>
-                        <th>说明</th>
-                        <th>操作</th>
-                        </thead>
-                        <tbody>
-                        <tr th:each="user1 : ${session.user.getId()}">
-                            <th th:text="${session.user.getId()}"></th>
-                            <td th:text="${session.user.getName()}"></td>
-                            <td th:text="${session.user.getToken()}">
-                                <button type="button" class="btn btn-default" data-toggle="tooltip"
-                                        data-placement="right" title="Tooltip on right">Tooltip on right
-                                </button>
-                            </td>
-                            <td th:text="${#dates.format(session.user.getGmtCreate(),'yyyy-MM-dd HH:mm')}"></td>
-                            <td th:text="${#dates.format(session.user.getGmtModified(),'yyyy-MM-dd HH:mm')}"></td>
-                            <td th:text="${session.user.getAvatarUrl()}"></td>
-                            <td th:text="${session.user.getBio()}"></td>
-                            <td>
-                                <a class="btn btn-danger btn-sm admin-btn-operation"
-                                   th:href="@{'/admin/users/'+${session.user.getId()}}"
-                                   style="background: red">删除</a>
-                                <a class="btn btn-default btn-sm admin-btn-operation" href="#" role="button">Link</a>
-                            </td>
-                        </tr>
+        <!--右侧内容-->
+        <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+            <div class="tab-content">
+                <!--用户管理-->
+                <div th:if="${section=='users'}">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12">
+                        <table class="table table-hover">
+                            <thead>
+                            <th>ID</th>
+                            <th>用户名</th>
+                            <th>Token</th>
+                            <th>首次登陆状态</th>
+                            <th>最新登陆状态</th>
+                            <th>头像</th>
+                            <th>操作</th>
+                            </thead>
+                            <tbody>
+                            <tr th:each="user1 : ${session.user.getId()}">
+                                <th th:text="${session.user.getId()}"></th>
+                                <td th:text="${session.user.getName()}"></td>
+                                <td th:text="${session.user.getToken()}">
+                                    <button type="button" class="btn btn-default" data-toggle="tooltip"
+                                            data-placement="right" title="Tooltip on right">Tooltip on right
+                                    </button>
+                                </td>
+                                <td th:text="${#dates.format(session.user.getGmtCreate(),'yyyy-MM-dd HH:mm')}"></td>
+                                <td th:text="${#dates.format(session.user.getGmtModified(),'yyyy-MM-dd HH:mm')}"></td>
+                                <td>
+                                    <img th:src="${session.user.getAvatarUrl()}" class="media-object img-rounded">
+                                </td>
+                                <td>
+                                    <!-- 删除模态框按钮 -->
+                                    <a class="btn btn-danger btn-sm admin-btn-operation" style="background: red" data-toggle="modal"
+                                       data-target="#myModal">
+                                        删除
+                                    </a>
 
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <!--帖子管理-->
-            <div  th:if="${section == 'questions'}">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12">
-                    <table class="table table-hover">
-                        <thead>
-                        <th>ID</th>
-                        <th>创建者</th>
-                        <th>标题</th>
-                        <th>创建时间</th>
-                        <th>更新时间</th>
-                        <th>浏览次数</th>
-                        <th>标签</th>
-                        <th>操作</th>
-                        </thead>
-                        <tbody>
-                        <tr th:each="question : ${pagination.data}">
-                            <th th:text="${question.id}"></th>
-                            <td th:text="${question.creator}"></td>
-                            <td th:text="${question.title}"></td>
-                            <td th:text="${#dates.format(question.gmtCreate,'yyyy-MM-dd HH:mm')}"></td>
-                            <td th:text="${#dates.format(question.gmtModified,'yyyy-MM-dd HH:mm')}"></td>
+                                    <!-- 删除模态框 -->
+                                    <div class="admin-delete-modal modal fade" id="myModal" tabindex="-1" role="dialog"
+                                         aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <h4 class="modal-title" id="myModalLabel">删除用户信息</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    确定要删除此用户在该网站发布的所有内容吗
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a class="btn btn-danger" style="background: red"
+                                                       th:href="@{'/admin/users/'+${session.user.getId()}}">删除</a>
+                                                    <a class="btn btn-default" style="background: white"
+                                                       data-dismiss="modal">我点错了</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                            <td th:text="${question.viewCount}"></td>
-                            <td th:text="${question.tag}"></td>
-                            <td>
-                                <a class="btn btn-default btn-sm admin-btn-operation"
-                                   th:href="@{'/publish/'+${question.id}}" role="button">编辑</a>
-                                <a class="btn btn-default btn-sm admin-btn-operation"
-                                   th:href="@{'/question/'+${question.id}}" role="button">链接</a>
-                                <a class="btn btn-danger btn-sm admin-btn-operation"
-                                   th:href="@{'/admin/questions/'+${question.id}}"
-                                   style="background: red">删除</a>
-                            </td>
-                        </tr>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--帖子管理-->
+                <div th:if="${section == 'questions'}">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12">
+                        <table class="table table-hover">
+                            <thead>
+                            <th>ID</th>
+                            <th>创建者</th>
+                            <th>标题</th>
+                            <th>创建时间</th>
+                            <th>更新时间</th>
+                            <th>浏览次数</th>
+                            <th>标签</th>
+                            <th>操作</th>
+                            </thead>
+                            <tbody>
+                            <tr th:each="question : ${pagination.data}">
+                                <th th:text="${question.id}"></th>
+                                <td th:text="${question.creator}"></td>
+                                <td th:text="${question.title}"></td>
+                                <td th:text="${#dates.format(question.gmtCreate,'yyyy-MM-dd HH:mm')}"></td>
+                                <td th:text="${#dates.format(question.gmtModified,'yyyy-MM-dd HH:mm')}"></td>
 
-                        </tbody>
-                    </table>
+                                <td th:text="${question.viewCount}"></td>
+                                <td th:text="${question.tag}"></td>
+                                <td>
+                                    <a class="btn btn-default btn-sm admin-btn-operation"
+                                       th:href="@{'/publish/'+${question.id}}" role="button">编辑</a>
+                                    <a class="btn btn-default btn-sm admin-btn-operation"
+                                       th:href="@{'/question/'+${question.id}}" role="button">链接</a>
+                                    <!-- 删除模态框按钮 -->
+                                    <a class="btn btn-danger btn-sm admin-btn-operation" style="background: red" data-toggle="modal"
+                                       data-target="#myModal">
+                                        删除
+                                    </a>
+
+                                    <!-- 删除模态框 -->
+                                    <div class="admin-delete-modal modal fade" id="myModal" tabindex="-1" role="dialog"
+                                         aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <h4 class="modal-title" id="myModalLabel">删除用户信息</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    确定要删除此用户在该网站发布的所有内容吗
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a class="btn btn-danger" style="background: red"
+                                                       th:href="@{'/admin/questions/'+${question.id}}">删除</a>
+                                                    <a class="btn btn-default" style="background: white"
+                                                       data-dismiss="modal">我点错了</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
-            <!--评论管理-->
-            <div  th:if="${section == 'comments'}">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12">
-                    <table class="table table-hover">
-                        <thead>
-                        <th>ID</th>
-                        <th>问题帖子ID</th>
-                        <th>一级/二级评论</th>
-                        <th>评论人</th>
-                        <th>评论时间</th>
-                        <th>评论内容</th>
-                        <th>该评论的二级评论数</th>
-                        <th>操作</th>
-                        </thead>
-                        <tbody>
-                        <tr th:each="comment : ${paginationComment.data}">
-                            <th th:text="${comment.id}"></th>
-                            <th th:text="${comment.parentId}"></th>
-                            <th th:text="${comment.type}"></th>
-                            <th th:text="${comment.commentator}"></th>
-                            <th th:text="${#dates.format(comment.gmtCreate,'yyyy-MM-dd HH:mm')}"></th>
-                            <th th:text="${comment.content}"></th>
-                            <th th:text="${comment.commentCount}"></th>
-                            <th>
-                                <a class="btn btn-default btn-sm admin-btn-operation"
-                                   th:href="@{'/question/'+${comment.parentId}}" role="button">链接</a>
-                                <a class="btn btn-danger btn-sm admin-btn-operation"
-                                   th:href="@{'/admin/comments/'+${comment.id}}"
-                                   style="background: red">删除</a>
-                            </th>
-                        </tr>
-                        </tbody>
-                    </table>
+                <!--评论管理-->
+                <div th:if="${section == 'comments'}">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12">
+                        <table class="table table-hover">
+                            <thead>
+                            <th>ID</th>
+                            <th>问题帖子ID</th>
+                            <th>一级/二级评论</th>
+                            <th>评论人</th>
+                            <th>评论时间</th>
+                            <th>评论内容</th>
+                            <th>该评论的二级评论数</th>
+                            <th>操作</th>
+                            </thead>
+                            <tbody>
+                            <tr th:each="comment : ${paginationComment.data}">
+                                <th th:text="${comment.id}"></th>
+                                <th th:text="${comment.parentId}"></th>
+                                <th th:text="${comment.type}"></th>
+                                <th th:text="${comment.commentator}"></th>
+                                <th th:text="${#dates.format(comment.gmtCreate,'yyyy-MM-dd HH:mm')}"></th>
+                                <th th:text="${comment.content}" style="width: 50px"></th>
+                                <th th:text="${comment.commentCount}"></th>
+                                <th>
+                                    <a class="btn btn-default btn-sm admin-btn-operation"
+                                       th:href="@{'/question/'+${comment.parentId}}" role="button">链接</a>
+                                    <!-- 删除模态框按钮 -->
+                                    <a class="btn btn-danger btn-sm admin-btn-operation" style="background: red" data-toggle="modal"
+                                       data-target="#myModal">
+                                        删除
+                                    </a>
+                                    <!-- 删除模态框 -->
+                                    <div class="admin-delete-modal modal fade" id="myModal" tabindex="-1" role="dialog"
+                                         aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <h4 class="modal-title" id="myModalLabel">删除用户信息</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    确定要删除此用户在该网站发布的所有内容吗
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a class="btn btn-danger" style="background: red"
+                                                       th:href="@{'/admin/comments/'+${comment.id}}">删除</a>
+                                                    <a class="btn btn-default" style="background: white"
+                                                       data-dismiss="modal">我点错了</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
-            <!--通知管理-->
-            <div th:if="${section=='notification'}">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12">
-                    <table class="table table-hover">
-                        <thead>
-                        <th>ID</th>
-                        <th>评论人ID</th>
-                        <th>评论人</th>
-                        <th>评论帖子</th>
-                        <th>发帖人ID</th>
-                        <th>评论是否已经被查看</th>
-                        <th>评论发布时间</th>
-                        <th>评论浏览次数</th>
-                        <th>操作</th>
-                        </thead>
-                        <tbody>
-                        <tr th:each="notification : ${paginations.data}">
-                            <th th:text="${notification.id}"></th>
-                            <th th:text="${notification.notifier}"></th>
-                            <th th:text="${notification.notifierName}"></th>
-                            <th th:text="${notification.outerTitle}"></th>
-                            <th th:text="${notification.outerid}"></th>
-                            <th>
-                                <span th:if="${notification.status}!=0">是</span>
-                                <span th:if="${notification.status}==0">否</span>
-                            </th>
-                            <th th:text="${#dates.format(notification.gmtCreate,'yyyy-MM-dd HH:mm')}"></th>
-                            <th th:text="${notification.type}"></th>
-                            <th>
-                                <a class="btn btn-default btn-sm admin-btn-operation"
-                                   th:href="@{'/notification/'+${notification.id}}" role="button">链接</a>
-                                <a class="btn btn-danger btn-sm admin-btn-operation"
-                                   th:href="@{'/admin/notification/'+${notification.id}}"
-                                   style="background: red">删除</a>
-                            </th>
-                        </tr>
-                        </tbody>
-                    </table>
+                <!--通知管理-->
+                <div th:if="${section=='notification'}">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12">
+                        <table class="table table-hover">
+                            <thead>
+                            <th>ID</th>
+                            <th>通知人ID</th>
+                            <th>通知</th>
+                            <th>通知帖子ID</th>
+                            <th>通知帖子标题</th>
+                            <th>通知是否已经被查看</th>
+                            <th>通知时间</th>
+                            <th>通知一级/二级评论</th>
+                            <th>操作</th>
+                            </thead>
+                            <tbody>
+                            <tr th:each="notification : ${paginations.data}">
+                                <th th:text="${notification.id}"></th>
+                                <th th:text="${notification.notifier}"></th>
+                                <th th:text="${notification.notifierName}"></th>
+                                <th th:text="${notification.outerid}"></th>
+                                <th th:text="${notification.outerTitle}"></th>
+                                <th>
+                                    <span th:if="${notification.status}!=0">是</span>
+                                    <span th:if="${notification.status}==0">否</span>
+                                </th>
+                                <th th:text="${#dates.format(notification.gmtCreate,'yyyy-MM-dd HH:mm')}"></th>
+                                <th th:text="${notification.type}"></th>
+                                <th>
+                                    <a class="btn btn-default btn-sm admin-btn-operation"
+                                       th:href="@{'/notification/'+${notification.id}}" role="button">链接</a>
+                                    <a class="btn btn-danger btn-sm admin-btn-operation" style="background: red" data-toggle="modal"
+                                       data-target="#myModal">
+                                        删除
+                                    </a>
+                                    <!-- 删除模态框 -->
+                                    <div class="admin-delete-modal modal fade" id="myModal" tabindex="-1" role="dialog"
+                                         aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <h4 class="modal-title" id="myModalLabel">删除用户信息</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    确定要删除此用户在该网站发布的所有内容吗
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a class="btn btn-danger" style="background: red"
+                                                       th:href="@{'/admin/notification/'+${notification.id}}">删除</a>
+                                                    <a class="btn btn-default" style="background: white"
+                                                       data-dismiss="modal">我点错了</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="pg_footer"></div>
+<!--底部-->
+<div th:insert="~{footer :: foot}"></div>
 </body>
 </html>

@@ -117,4 +117,10 @@ public class NotificationService {
         notificationExtMapper.deleteByNotificationId(notification);
 
     }
+    public void deleteByNotifier(Long id) {
+        Notification notification=new Notification();
+        notification.setNotifier(id);
+        notificationExtMapper.deleteByNotifier(notification);
+
+    }
 }

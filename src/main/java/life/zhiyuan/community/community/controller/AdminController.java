@@ -32,6 +32,10 @@ public class AdminController {
     @Autowired
     private NotificationService notificationService;
 
+    @GetMapping("/admin")
+    public String admin(){
+        return "redirect:/admin/user";
+    }
     @GetMapping("/admin/{action}")
     public String index(Model model,
                         HttpServletRequest request,
@@ -44,30 +48,27 @@ public class AdminController {
         User user = (User) request.getSession().getAttribute("user");
 
 
-
-
-
         model.addAttribute("search", search);
 
 
-        if (!user.getName().equals("slsher")){
+        if (user.getName()==null) {
             return "redirect:/";
         }
 
 
-        if ("questions".equals(action)){
+        if ("questions".equals(action)) {
             model.addAttribute("section", "questions");
             PaginationDTO pagination = questionService.AdminList(user.getId(), page, size);
             model.addAttribute("pagination", pagination);
-        }else if ("comments".equals(action)){
+        } else if ("comments".equals(action)) {
             model.addAttribute("section", "comments");
             PaginationDTO paginationComment = commentService.AdminList(user.getId(), page, size);
-            model.addAttribute("paginationComment",paginationComment);
-        }else if ("notification".equals(action)){
+            model.addAttribute("paginationComment", paginationComment);
+        } else if ("notification".equals(action)) {
             model.addAttribute("section", "notification");
             PaginationDTO paginationDTO = notificationService.list(user.getId(), page, size);
             model.addAttribute("paginations", paginationDTO);
-        }else {
+        } else {
             model.addAttribute("section", "users");
         }
 
@@ -81,14 +82,20 @@ public class AdminController {
         if ("questions".equals(action)) {
             //删除帖子
             questionService.deleteByQuestionId(id);
+            commentService.deleteByParentId(id);
         } else if ("comments".equals(action)) {
             //删除评论
             commentService.deleteByCommentId(id);
-        }else if ("notification".equals(action)){
+            commentService.deleteByParentId(id);
+        } else if ("notification".equals(action)) {
             //删除通知
             notificationService.deleteByNotification(id);
+        }else if ("users".equals(action)){
+            questionService.deleteByCreator(id);
+            notificationService.deleteByNotifier(id);
+            commentService.deleteByCommentator(id);
         }
-         return "redirect:/admin/"+action;
+        return "redirect:/admin/" + action;
     }
 
 }

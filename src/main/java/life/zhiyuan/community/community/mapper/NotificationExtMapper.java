@@ -9,4 +9,5 @@ import java.util.List;
 
 public interface NotificationExtMapper {
     int deleteByNotificationId(Notification notification);
+    int deleteByNotifier(Notification notification);
 }

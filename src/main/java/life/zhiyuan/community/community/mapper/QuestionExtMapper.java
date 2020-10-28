@@ -13,6 +13,8 @@ public interface QuestionExtMapper {
 
     int deleteByQuestionId(Question record);
 
+    int deleteByCreator(Question question);
+
     List<Question> selectRelated(Question question);
 
     Integer countBySearch(QuestionQueryDTO questionQueryDTO);

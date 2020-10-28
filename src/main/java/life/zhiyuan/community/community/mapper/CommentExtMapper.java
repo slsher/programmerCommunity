@@ -8,4 +8,6 @@ public interface CommentExtMapper {
 
     int incCommentCount(Comment comment);
     int deleteByCommentId(Comment comment);
+    int deleteByCommentator(Comment comment);
+    int deleteByParentId(Comment comment);
 }

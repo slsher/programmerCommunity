@@ -196,4 +196,15 @@ public class CommentService {
        comment.setId(id);
        commentExtMapper.deleteByCommentId(comment);
     }
+    public void deleteByCommentator(Long id){
+       Comment comment=new Comment();
+       comment.setCommentator(id);
+       commentExtMapper.deleteByCommentator(comment);
+    }
+
+    public void deleteByParentId(Long id) {
+        Comment comment=new Comment();
+        comment.setParentId(id);
+        commentExtMapper.deleteByParentId(comment);
+    }
 }

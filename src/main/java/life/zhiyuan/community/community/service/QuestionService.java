@@ -228,6 +228,11 @@ public class QuestionService {
         question.setId(id);
         questionExtMapper.deleteByQuestionId(question);
     }
+    public void  deleteByCreator(long id){
+        Question question=new Question();
+        question.setCreator(id);
+        questionExtMapper.deleteByCreator(question);
+    }
     public List<QuestionDTO> selectRelated(QuestionDTO queryDTO) {
         if (StringUtils.isBlank(queryDTO.getTag())) {
             return new ArrayList<>();
