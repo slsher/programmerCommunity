@@ -21,7 +21,7 @@ vim src/main/resources/application-production.properties
 - mkdir App
 - cd App
 - clone git https://github.com/slsher/programmerCommunity.git
-- yum isntall maven
+- yum install maven
 - mvn -v
 - mvn clean  compile package
 - cp src/main/resources/application.properties src/main/resources/application-production.properties

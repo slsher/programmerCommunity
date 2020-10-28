@@ -63,10 +63,10 @@
                             <span th:text="${question.description}"></span>
                             <br>
                             <span class="text-desc index-state">
-                                <span th:text="${question.tag}" class="index-questionTag"></span> •&nbsp;
+                                <span th:text="${question.tag}" class="index-questionTag"></span> •
                                 <span th:text="${question.user.name}" th:if="${question.user.name!=null}"
-                                      style="color: #666666"></span> •&nbsp;
-                                <span th:if="${question.user.name==null}" style="color: #666666">匿名用户 •&nbsp;</span>
+                                      style="color: #666666"></span>
+                                <span th:if="${question.user.name==null}" style="color: #666666">匿名用户 </span>•&nbsp;
                                 <span class="glyphicon glyphicon-comment"></span>
                                 <span th:text="${question.commentCount}"></span>条回复 •&nbsp;
                                 <span class="glyphicon glyphicon-eye-open"></span>
@@ -142,7 +142,7 @@
                 <!--扫码-->
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 media index-aside-code">
                     <div class="media-left text-left">
-                        <img src="/images/wechat.png" class="media-object question-code img-thumbnail">
+                        <img src="/images/wechat2.png" class="media-object question-code img-thumbnail">
                     </div>
                     <a class="media-body text-center" id="index-code" data-toggle="popover" data-placement="bottom">
                         <h4 class="media-heading">扫码知猿手机网页 ></h4>
