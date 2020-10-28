@@ -1,10 +1,11 @@
 ## 知猿社区
 
 ## 运行步骤
-mvn
-mvn flyway:migrate -Pdev
-mvn clean compile package
-java -jar target/community-0.0.1-SNAPSHOT.jar
+- git clone https://github.com/slsher/programmerCommunity.git
+- mvn -v
+- mvn flyway:migrate -Pdev
+- mvn clean compile package
+- java -jar target/community-0.0.1-SNAPSHOT.jar
 
 ## 部署
 ## 依赖
@@ -13,27 +14,12 @@ java -jar target/community-0.0.1-SNAPSHOT.jar
 - Maven
 - MySQL
 
-more src/main/resources/application-production.properties
-vim src/main/resources/application-production.properties
-## 步骤
-- yum update
-- yum install git
-- mkdir App
-- cd App
-- clone git https://github.com/slsher/programmerCommunity.git
-- yum install maven
-- mvn -v
-- mvn clean  compile package
-- cp src/main/resources/application.properties src/main/resources/application-production.properties
-- mvn package
-- java -jar -Dspring.profiles.active=production target/community-0.0.1-SNAPSHOT.jar
-
-## 本地运行手册
+## 本地运行步骤
 1. 安装必备工具  
 JDK，Maven
 2. 克隆代码到本地
 ```sh
-git clone https://github.com/codedrinker/community.git
+git clone https://github.com/slsher/programmerCommunity.git
 ````
 3. 运行打包命令
 ```sh
@@ -47,6 +33,25 @@ java -jar target/community-0.0.1-SNAPSHOT.jar
 ```
 http://localhost:8887
 ```
+
+
+
+more src/main/resources/application-production.properties
+vim src/main/resources/application-production.properties
+## 云端运行步骤
+- yum update
+- yum install git
+- mkdir App
+- cd App
+- git clone  https://github.com/slsher/programmerCommunity.git
+- yum install maven
+- mvn -v
+- mvn clean  compile package
+- cp src/main/resources/application.properties src/main/resources/application-production.properties
+- mvn clean compile package/mvn package
+- java -jar -Dspring.profiles.active=production target/community-0.0.1-SNAPSHOT.jar
+
+
 
 ## 资料
 * [spring文档](https://spring.io/guides)

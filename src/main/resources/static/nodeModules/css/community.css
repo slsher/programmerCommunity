@@ -295,7 +295,13 @@ body {
 .index-title a:hover {
     color: #428bca;
 }
-
+.index-title-description{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 17px;
+}
 .nav-tabs {
     padding: 10px 5px 0;
     border-bottom: 1px solid #DDDDDD;

@@ -60,7 +60,7 @@
                             <h4 class="media-heading index-title">
                                 <a th:href="@{'/question/'+${question.id}}" th:text="${question.title}"></a>
                             </h4>
-                            <span th:text="${question.description}"></span>
+                            <span th:text="${question.description}" class="index-title-description"></span>
                             <br>
                             <span class="text-desc index-state">
                                 <span th:text="${question.tag}" class="index-questionTag"></span> •
@@ -121,7 +121,7 @@
                             <h4 class="media-heading index-title">
                                 <a th:href="@{'/question/'+${question.id}}" th:text="${question.title}"></a>
                             </h4>
-                            <span th:text="${question.description}"></span>
+                            <span th:text="${question.description}" class="index-title-description"></span>
                             <br>
                             <span class="text-desc index-state">
                                 <span class="glyphicon glyphicon-comment"></span>
