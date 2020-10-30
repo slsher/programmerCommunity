@@ -124,10 +124,14 @@
                             <p th:text="${question.description}" class="index-title-description"></p>
                             <br>
                             <span class="text-desc index-state">
+                               <span th:text="${question.tag}" class="index-questionTag"></span> •
+                                <span th:text="${question.user.name}" th:if="${question.user.name!=null}"
+                                      style="color: #666666"></span>
+                                <span th:if="${question.user.name==null}" style="color: #666666">匿名用户 </span>•&nbsp;
                                 <span class="glyphicon glyphicon-comment"></span>
-                                <span th:text="${question.commentCount}"></span>个回复&nbsp;&nbsp;&nbsp;
+                                <span th:text="${question.commentCount}"></span>条回复 •&nbsp;
                                 <span class="glyphicon glyphicon-eye-open"></span>
-                                <span th:text="${question.viewCount}"></span>个浏览&nbsp;&nbsp;&nbsp;
+                                <span th:text="${question.viewCount}"></span>个浏览 •&nbsp;
                                 <span th:text="${#dates.format(question.gmtCreate,'yyyy-MM-dd HH:mm')}"></span></span>
                         </div>
                         <hr>

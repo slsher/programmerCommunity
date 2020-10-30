@@ -51,7 +51,7 @@ public class AdminController {
         model.addAttribute("search", search);
 
 
-        if (user.getName()==null) {
+        if ("slsher".equals(user.getName())) {
             return "redirect:/";
         }
 
