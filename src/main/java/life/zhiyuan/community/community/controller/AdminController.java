@@ -51,7 +51,10 @@ public class AdminController {
         model.addAttribute("search", search);
 
 
-        if ("slsher".equals(user.getName())) {
+//        if (!"37f0b97d-e469-49a3-aba1-8113f8970f18".equals(user.getToken())) {
+//            return "redirect:/";
+//        }
+        if (!"slsher".equals(user.getName())) {
             return "redirect:/";
         }
 

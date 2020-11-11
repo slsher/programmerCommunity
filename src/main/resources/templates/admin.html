@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" style="height: 100%">
 <head>
     <title>后台管理</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -13,35 +13,114 @@
 </head>
 <body>
 <!--顶部-->
-<div th:insert="~{navigation :: nav}"></div>
+<div th:fragment="nav" class="admin-nav">
+    <nav class="navbar navbar-default">
+        <div class=" navigation-nav">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">后台管理系统</span>
+                </button>
+                <a class="navbar-brand" href="/admin">后台管理系统</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="time" style="margin-right: 30px;color: #666666;font-size: 14px"></a>
+                    </li>
+
+                    <li th:if="${session.user != null}">
+                        <a href="/publish">提问</a>
+                    </li>
+                    <li><a href="/profile/replies">消息 <span class="badge navigation-message"
+                                                            th:if="${session.unreadCount}!=0"
+                                                            th:text="${session.unreadCount}"></span></a>
+                    </li>
+                    <!--collapse 我的-->
+                    <li class="dropdown" th:if="${session.user != null}">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">
+                            <img th:src="${session.user.getAvatarUrl()}" class="navigation-avatarUrl img-rounded">
+                            <span th:text="${session.user.getName()}"></span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="glyphicon glyphicon-home" href="/profile/questions"> 我的主页</a></li>
+                            <li><a class="glyphicon glyphicon-off" href="/logout"> 退出</a></li>
+                        </ul>
+                    </li>
+                    <!--前台首页-->
+                    <li>
+                        <a href="/">前台首页</a>
+                    </li>
+                    <li th:if="${session.user == null}">
+                        <!--                        <a th:href="@{https://github.com/login/oauth/authorize(client_id='d0d3ade7e00a78d3000f',redirect_uri=${#httpServletRequest.getServletContext().getAttribute('redirectUri')},scope='user',state=1)}">登录</a>-->
+                        <a th:href="@{https://github.com/login/oauth/authorize(client_id='d0d3ade7e00a78d3000f',redirect_uri=${#httpServletRequest.getRequestURL()+'callback'},scope='user',state=1)}">登录</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
 
 
 <!--内容-->
-<div class="container-fluid" style="background: white;margin: 0 3%;">
-    <div class="row  admin-content">
-
+<div class="container-fluid"   style="background-color: #f6f6f6;padding: 0;height: 100%">
+    <div class="row" style="height: 100%">
         <!--左侧标签-->
-        <div class="col-lg-2 hidden-xs hidden-sm">
-            <div class="list-group section">
-                <a href="/admin/users"
-                   th:classappend="${section == 'users'} ? 'active list-group-item' : 'list-group-item' ">用户管理</a>
-                <a href="/admin/questions"
-                   th:classappend="${section == 'questions'} ? 'active list-group-item' : 'list-group-item' ">帖子管理</a>
-                <a href="/admin/comments"
-                   th:classappend="${section == 'comments'} ? 'active list-group-item' : 'list-group-item' ">评论管理</span>
-                </a>
-                <a href="/admin/notification"
-                   th:classappend="${section == 'notification'} ? 'active list-group-item' : 'list-group-item' ">通知管理</span>
-                </a>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 "
+             style="border-right: 2px solid #666666;height: 100%;background-color: white">
+            <div style="height: 130px;width: 100%">
+                <img th:src="${session.user.getAvatarUrl()}" class="admin-img img-circle">
+                <p style="text-align: center;font-size: 12px;font-weight: bold">
+                    你好！<span th:text="${session.user.getName()}"></span>, 欢迎回来
+                </p>
+            </div>
+            <div class="admin-leftside-tab">
+                <ul class="list-group section">
+                    <li style="position: relative;left: 3%;text-align: center;"
+                        th:classappend="${section == 'users'} ? ' disabled list-group-item' : 'list-group-item' ">
+                        <a href="/admin/users">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <cite>用户管理</cite>
+                            <span class="caret" style="margin-left: 25%;"></span>
+                        </a>
+                    </li>
+                    <li style="position: relative;left: 3%;text-align: center"
+                        th:classappend="${section == 'questions'} ? 'disabled list-group-item' : 'list-group-item' ">
+                        <a href="/admin/questions">
+                            <i class="glyphicon glyphicon-book"></i>
+                            <cite>帖子管理</cite>
+                            <span class="caret" style="margin-left: 25%;"></span>
+                        </a>
+                    </li>
+                    <li style="position: relative;left: 3%;text-align: center"
+                        th:classappend="${section == 'comments'} ? 'disabled list-group-item' : 'list-group-item' ">
+                        <a href="/admin/comments">
+                            <i class="glyphicon glyphicon-comment"></i>
+                            <cite>评论管理</cite>
+                            <span class="caret" style="margin-left: 25%;"></span>
+                        </a>
+                    </li>
+                    <li style="position: relative;left: 3%;text-align: center"
+                        th:classappend="${section == 'notification'} ? 'disabled list-group-item' : 'list-group-item' ">
+                        <a href="/admin/notification">
+                            <i class="glyphicon glyphicon-send"></i>
+                            <cite>通知管理</cite>
+                            <span class="caret" style="margin-left: 25%;"></span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
+
         <!--右侧内容-->
-        <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
             <div class="tab-content">
                 <!--用户管理-->
                 <div th:if="${section=='users'}">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12">
-                        <table class="table table-hover">
+                        <table class="table table-bordered">
                             <thead>
                             <th>ID</th>
                             <th>用户名</th>
@@ -67,7 +146,8 @@
                                 </td>
                                 <td>
                                     <!-- 删除模态框按钮 -->
-                                    <a class="btn btn-danger btn-sm admin-btn-operation" style="background: red" data-toggle="modal"
+                                    <a class="btn btn-danger btn-sm admin-btn-operation" style="background: red"
+                                       data-toggle="modal"
                                        data-target="#myModal">
                                         删除
                                     </a>
@@ -105,7 +185,7 @@
                 <!--帖子管理-->
                 <div th:if="${section == 'questions'}">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12">
-                        <table class="table table-hover">
+                        <table class="table table-bordered">
                             <thead>
                             <th>ID</th>
                             <th>创建者</th>
@@ -132,7 +212,8 @@
                                     <a class="btn btn-default btn-sm admin-btn-operation"
                                        th:href="@{'/question/'+${question.id}}" role="button">链接</a>
                                     <!-- 删除模态框按钮 -->
-                                    <a class="btn btn-danger btn-sm admin-btn-operation" style="background: red" data-toggle="modal"
+                                    <a class="btn btn-danger btn-sm admin-btn-operation" style="background: red"
+                                       data-toggle="modal"
                                        data-target="#myModal">
                                         删除
                                     </a>
@@ -170,7 +251,7 @@
                 <!--评论管理-->
                 <div th:if="${section == 'comments'}">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12">
-                        <table class="table table-hover">
+                        <table class="table table-bordered">
                             <thead>
                             <th>ID</th>
                             <th>问题帖子ID</th>
@@ -194,7 +275,8 @@
                                     <a class="btn btn-default btn-sm admin-btn-operation"
                                        th:href="@{'/question/'+${comment.parentId}}" role="button">链接</a>
                                     <!-- 删除模态框按钮 -->
-                                    <a class="btn btn-danger btn-sm admin-btn-operation" style="background: red" data-toggle="modal"
+                                    <a class="btn btn-danger btn-sm admin-btn-operation" style="background: red"
+                                       data-toggle="modal"
                                        data-target="#myModal">
                                         删除
                                     </a>
@@ -230,7 +312,7 @@
                 <!--通知管理-->
                 <div th:if="${section=='notification'}">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-xs-12">
-                        <table class="table table-hover">
+                        <table class="table table-bordered">
                             <thead>
                             <th>ID</th>
                             <th>通知人ID</th>
@@ -258,7 +340,8 @@
                                 <th>
                                     <a class="btn btn-default btn-sm admin-btn-operation"
                                        th:href="@{'/notification/'+${notification.id}}" role="button">链接</a>
-                                    <a class="btn btn-danger btn-sm admin-btn-operation" style="background: red" data-toggle="modal"
+                                    <a class="btn btn-danger btn-sm admin-btn-operation" style="background: red"
+                                       data-toggle="modal"
                                        data-target="#myModal">
                                         删除
                                     </a>
@@ -295,7 +378,37 @@
         </div>
     </div>
 </div>
-<!--底部-->
-<div th:insert="~{footer :: foot}"></div>
+
 </body>
+<script>
+    //顶部时间
+    function getTime() {
+        var myDate = new Date();
+        var myYear = myDate.getFullYear(); //获取完整的年份(4位,1970-????)
+        var myMonth = myDate.getMonth() + 1; //获取当前月份(0-11,0代表1月)
+        var myToday = myDate.getDate(); //获取当前日(1-31)
+        var myDay = myDate.getDay(); //获取当前星期X(0-6,0代表星期天)
+        var myHour = myDate.getHours(); //获取当前小时数(0-23)
+        var myMinute = myDate.getMinutes(); //获取当前分钟数(0-59)
+        var mySecond = myDate.getSeconds(); //获取当前秒数(0-59)
+        var week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+        var nowTime;
+
+        nowTime = myYear + '-' + fillZero(myMonth) + '-' + fillZero(myToday) + '&nbsp;&nbsp;' + fillZero(myHour) + ':' + fillZero(myMinute) + ':' + fillZero(mySecond) + '&nbsp;&nbsp;' + week[myDay] + '&nbsp;&nbsp;';
+        //console.log(nowTime);
+        $('#time').html(nowTime);
+    };
+
+    function fillZero(str) {
+        var realNum;
+        if (str < 10) {
+            realNum = '0' + str;
+        } else {
+            realNum = str;
+        }
+        return realNum;
+    }
+
+    setInterval(getTime, 1000);
+</script>
 </html>

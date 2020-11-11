@@ -6,12 +6,36 @@
 body {
     /*background-color: #efefef;*/
     background: url("/images/bg.jpg") repeat;
+    height: 100%;
 }
 
-.admin-content{
-    padding: 20px 0 100px 10px;
-
+.admin-img{
+    width: 80px;
+    height: 80px;
+    display: block;
+    box-sizing: border-box;
+    border: 4px solid #44576b;
+    margin: 10px auto 10px;
 }
+
+.admin-leftside-tab li:hover,
+.admin-leftside-tab li:focus{
+    border-left: 4px solid #2fb9d4;
+    background-color:#d9d9d9 ;
+    color: white;
+}
+.admin-leftside-tab li>a{
+    text-decoration: none;
+}
+
+
+.admin-nav{
+    background: #001529;
+    height: 55px;
+    border-bottom: 5px solid #666666;
+    color: #ffffff;
+}
+
 .admin-main{
     margin: 30px;
     background-color: white;
