@@ -1,8 +1,6 @@
 package life.zhiyuan.community.community.service;
 
-import life.zhiyuan.community.community.dto.CommentDTO;
-import life.zhiyuan.community.community.dto.PaginationDTO;
-import life.zhiyuan.community.community.dto.QuestionDTO;
+import life.zhiyuan.community.community.dto.*;
 import life.zhiyuan.community.community.enums.CommentTypeEnum;
 import life.zhiyuan.community.community.enums.NotificationStatusEnum;
 import life.zhiyuan.community.community.enums.NotificationTypeEnum;
@@ -10,16 +8,14 @@ import life.zhiyuan.community.community.exception.CustomizeErrorCode;
 import life.zhiyuan.community.community.exception.CustomizeException;
 import life.zhiyuan.community.community.mapper.*;
 import life.zhiyuan.community.community.model.*;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -189,7 +185,56 @@ public class CommentService {
         return paginationDTO;
     }
 
+    public PaginationDTO list(String search,Integer page, Integer size) {
 
+        if (StringUtils.isNotBlank(search)) {
+            String[] tags = StringUtils.split(search, " ");
+            search= Arrays.stream(tags).collect(Collectors.joining("|"));
+        }
+
+        PaginationDTO paginationDTO = new PaginationDTO();
+
+        CommentQueryDTO questionQueryDTO = new CommentQueryDTO();
+        questionQueryDTO.setSearch(search);
+        Integer totalCount =  commentExtMapper.countBySearch(questionQueryDTO);
+
+        Integer totalPage;
+        if (totalCount % size == 0) {
+            // 如果等于0
+            totalPage = totalCount / size;
+        } else {
+            // 如果不等于0
+            totalPage = totalCount / size + 1;
+        }
+
+
+        //没有页数的处理
+        if (page < 1) {
+            page = 1;
+        }
+        if (page > totalPage) {
+            page = totalPage;
+        }
+        paginationDTO.setPagination(totalPage, page);
+        // 计算页面公式 size*(page-1)
+        Integer offset = size * (page - 1);
+
+        questionQueryDTO.setSize(size);
+        questionQueryDTO.setPage(offset);
+        List<Comment> comments = commentExtMapper.selectBySearch(questionQueryDTO);
+        List<CommentDTO> commentDTOList = new ArrayList<>();
+
+        for (Comment comment : comments) {
+            User user = userMapper.selectByPrimaryKey(comment.getCommentator());
+            CommentDTO commentDTO = new CommentDTO();
+            BeanUtils.copyProperties(comment, commentDTO);
+            commentDTO.setUser(user);
+            commentDTOList.add(commentDTO);
+        }
+
+        paginationDTO.setData(commentDTOList);
+        return paginationDTO;
+    }
 
     public void deleteByCommentId(Long id){
        Comment comment=new Comment();

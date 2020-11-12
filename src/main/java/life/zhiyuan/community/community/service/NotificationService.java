@@ -1,7 +1,6 @@
 package life.zhiyuan.community.community.service;
 
-import life.zhiyuan.community.community.dto.NotificationDTO;
-import life.zhiyuan.community.community.dto.PaginationDTO;
+import life.zhiyuan.community.community.dto.*;
 import life.zhiyuan.community.community.enums.NotificationStatusEnum;
 import life.zhiyuan.community.community.enums.NotificationTypeEnum;
 import life.zhiyuan.community.community.exception.CustomizeErrorCode;
@@ -9,10 +8,8 @@ import life.zhiyuan.community.community.exception.CustomizeException;
 import life.zhiyuan.community.community.mapper.NotificationExtMapper;
 import life.zhiyuan.community.community.mapper.NotificationMapper;
 import life.zhiyuan.community.community.mapper.UserMapper;
-import life.zhiyuan.community.community.model.Notification;
-import life.zhiyuan.community.community.model.NotificationExample;
-import life.zhiyuan.community.community.model.User;
-import life.zhiyuan.community.community.model.UserExample;
+import life.zhiyuan.community.community.model.*;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +29,8 @@ public class NotificationService {
     @Autowired
     private NotificationExtMapper notificationExtMapper;
 
+    @Autowired
+    public UserMapper userMapper;
     public PaginationDTO list(Long userId, Integer page, Integer size) {
         PaginationDTO<NotificationDTO> paginationDTO = new PaginationDTO<>();
 
@@ -83,6 +82,56 @@ public class NotificationService {
         paginationDTO.setData(notificationDTOS);
         return paginationDTO;
 
+    }
+    public PaginationDTO list(String search,Integer page, Integer size) {
+
+        if (StringUtils.isNotBlank(search)) {
+            String[] tags = StringUtils.split(search, " ");
+            search=Arrays.stream(tags).collect(Collectors.joining("|"));
+        }
+
+        PaginationDTO paginationDTO = new PaginationDTO();
+
+        NotificationQueryDTO notificationQueryDTO = new NotificationQueryDTO();
+        notificationQueryDTO.setSearch(search);
+        Integer totalCount =  notificationExtMapper.countBySearch(notificationQueryDTO);
+
+        Integer totalPage;
+        if (totalCount % size == 0) {
+            // 如果等于0
+            totalPage = totalCount / size;
+        } else {
+            // 如果不等于0
+            totalPage = totalCount / size + 1;
+        }
+
+
+        //没有页数的处理
+        if (page < 1) {
+            page = 1;
+        }
+        if (page > totalPage) {
+            page = totalPage;
+        }
+        paginationDTO.setPagination(totalPage, page);
+        // 计算页面公式 size*(page-1)
+        Integer offset = size * (page - 1);
+
+        notificationQueryDTO.setSize(size);
+        notificationQueryDTO.setPage(offset);
+        List<Notification> notifications = notificationExtMapper.selectBySearch(notificationQueryDTO);
+        List<NotificationDTO> notificationDTOS = new ArrayList<>();
+
+        for (Notification notification : notifications) {
+            User user = userMapper.selectByPrimaryKey(notification.getNotifier());
+            NotificationDTO notificationDTO = new NotificationDTO();
+            BeanUtils.copyProperties(notification, notificationDTO);
+            notificationDTO.setUser(user);
+            notificationDTOS.add(notificationDTO);
+        }
+
+        paginationDTO.setData(notificationDTOS);
+        return paginationDTO;
     }
 
     public Long unreadCount(Long userId) {

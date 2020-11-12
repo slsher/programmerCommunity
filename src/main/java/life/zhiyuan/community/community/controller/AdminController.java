@@ -63,11 +63,11 @@ public class AdminController {
             model.addAttribute("pagination", pagination);
         } else if ("comments".equals(action)) {
             model.addAttribute("section", "comments");
-            PaginationDTO paginationComment = commentService.AdminList(user.getId(), page, size);
+            PaginationDTO paginationComment = commentService.list(search, page, size);
             model.addAttribute("paginationComment", paginationComment);
         } else if ("notification".equals(action)) {
             model.addAttribute("section", "notification");
-            PaginationDTO paginationNotification = notificationService.list(user.getId(), page, size);
+            PaginationDTO paginationNotification = notificationService.list(search, page, size);
             model.addAttribute("paginationNotification", paginationNotification);
         } else {
             model.addAttribute("section", "users");

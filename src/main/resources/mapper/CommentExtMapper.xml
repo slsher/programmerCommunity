@@ -31,5 +31,23 @@
   <delete id="deleteByParentId" parameterType="life.zhiyuan.community.community.model.Comment" >
     delete from COMMENT where PARENT_ID= #{parentId}
     </delete>
-
+  <select id="countBySearch" parameterType="life.zhiyuan.community.community.dto.CommentQueryDTO"
+          resultType="java.lang.Integer">
+    select count(*) from COMMENT
+    <where>
+      <if test="search !=null">
+        and commentator regexp #{search}
+      </if>
+    </where>
+  </select>
+  <select id="selectBySearch" parameterType="life.zhiyuan.community.community.dto.CommentQueryDTO"
+          resultMap="BaseResultMap">
+    select * from COMMENT
+    <where>
+      <if test="search !=null">
+        and commentator regexp #{search}
+      </if>
+    </where>
+    order by gmt_create desc limit #{page},#{size}
+  </select>
 </mapper>
