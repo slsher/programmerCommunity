@@ -41,7 +41,7 @@ public class AdminController {
                         HttpServletRequest request,
                         //计算页数 接受传入的参数
                         @RequestParam(name = "page", defaultValue = "1") Integer page,
-                        @RequestParam(name = "size", defaultValue = "10") Integer size,
+                        @RequestParam(name = "size", defaultValue = "5") Integer size,
                         @RequestParam(name = "search", required = false) String search,
                         @PathVariable(name = "action") String action) {
 
@@ -51,9 +51,6 @@ public class AdminController {
         model.addAttribute("search", search);
 
 
-//        if (!"37f0b97d-e469-49a3-aba1-8113f8970f18".equals(user.getToken())) {
-//            return "redirect:/";
-//        }
         if (!"slsher".equals(user.getName())) {
             return "redirect:/";
         }
@@ -61,7 +58,8 @@ public class AdminController {
 
         if ("questions".equals(action)) {
             model.addAttribute("section", "questions");
-            PaginationDTO pagination = questionService.AdminList(user.getId(), page, size);
+//            PaginationDTO pagination = questionService.AdminList(user.getId(), page, size);
+            PaginationDTO pagination = questionService.list(search,page, size);
             model.addAttribute("pagination", pagination);
         } else if ("comments".equals(action)) {
             model.addAttribute("section", "comments");
@@ -69,8 +67,8 @@ public class AdminController {
             model.addAttribute("paginationComment", paginationComment);
         } else if ("notification".equals(action)) {
             model.addAttribute("section", "notification");
-            PaginationDTO paginationDTO = notificationService.list(user.getId(), page, size);
-            model.addAttribute("paginations", paginationDTO);
+            PaginationDTO paginationNotification = notificationService.list(user.getId(), page, size);
+            model.addAttribute("paginationNotification", paginationNotification);
         } else {
             model.addAttribute("section", "users");
         }

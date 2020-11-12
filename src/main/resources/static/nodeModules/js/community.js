@@ -152,6 +152,100 @@ function selectTag(e) {
 }
 
 /** 后台控制管理器*/
+/** 用户删除*/
+function deleteUser(userId){
+    var userModel=document.getElementById("userModel");
+    userModel.innerHTML=`<div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <h4 class="modal-title" id="myModalLabel">删除问题</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    确定要删除这个问题吗？
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a class="btn btn-danger" style="background: red"
+                                                       href="/admin/users/`+ userId+` ">删除</a>
+                                                    <a class="btn btn-default" style="background: white"
+                                                       data-dismiss="modal">我点错了</a>
+                                                </div>
+                                            </div>
+                                        </div>`
+}
+/** 问题删除*/
+function deleteQuestion(questionId){
+    // console.log(questionId)
+    var questionModel=document.getElementById("questionModal");
+    questionModel.innerHTML=`<div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <h4 class="modal-title" id="myModalLabel">删除问题</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    确定要删除这个问题吗？
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a class="btn btn-danger" style="background: red"
+                                                       href="/admin/questions/`+ questionId+` ">删除</a>
+                                                    <a class="btn btn-default" style="background: white"
+                                                       data-dismiss="modal">我点错了</a>
+                                                </div>
+                                            </div>
+                                        </div>`
+}
+/**删除评论*/
+function deleteComment(commentId){
+    var commentModel=document.getElementById("commentModel");
+    commentModel.innerHTML=`<div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <h4 class="modal-title" id="myModalLabel">删除问题</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    确定要删除这个问题吗？
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a class="btn btn-danger" style="background: red"
+                                                       href="/admin/comments/`+ commentId+` ">删除</a>
+                                                    <a class="btn btn-default" style="background: white"
+                                                       data-dismiss="modal">我点错了</a>
+                                                </div>
+                                            </div>
+                                        </div>`
+}
+/**删除通知*/
+function deleteNotification(notificationId){
+    var notificationModel=document.getElementById("notificationModel");
+    notificationModel.innerHTML=`<div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <h4 class="modal-title" id="myModalLabel">删除问题</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    确定要删除这个问题吗？
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a class="btn btn-danger" style="background: red"
+                                                       href="/admin/notification/`+ notificationId+` ">删除</a>
+                                                    <a class="btn btn-default" style="background: white"
+                                                       data-dismiss="modal">我点错了</a>
+                                                </div>
+                                            </div>
+                                        </div>`
+}
+
 
 
 

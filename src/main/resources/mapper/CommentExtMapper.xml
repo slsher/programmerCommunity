@@ -31,4 +31,5 @@
   <delete id="deleteByParentId" parameterType="life.zhiyuan.community.community.model.Comment" >
     delete from COMMENT where PARENT_ID= #{parentId}
     </delete>
+
 </mapper>
