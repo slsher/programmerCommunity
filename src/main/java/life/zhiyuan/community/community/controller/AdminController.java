@@ -74,6 +74,7 @@ public class AdminController {
             PaginationDTO paginationNotification = notificationService.list(search, page, size);
             model.addAttribute("paginationNotification", paginationNotification);
         } else {
+            model.addAttribute("section", "users");
             PaginationDTO paginationUser = userService.list(search,page, size);
             model.addAttribute("paginationUser", paginationUser);
 //            model.addAttribute("section", "users");
