@@ -164,7 +164,7 @@ function deleteUser(userId){
                                                     <h4 class="modal-title" id="myModalLabel">删除问题</h4>
                                                 </div>
                                                 <div class="modal-body">
-                                                    确定要删除这个问题吗？
+                                                    确定要删除这个用户信息吗？
                                                 </div>
                                                 <div class="modal-footer">
                                                     <a class="btn btn-danger" style="background: red"
@@ -211,7 +211,7 @@ function deleteComment(commentId){
                                                     <h4 class="modal-title" id="myModalLabel">删除问题</h4>
                                                 </div>
                                                 <div class="modal-body">
-                                                    确定要删除这个问题吗？
+                                                    确定要删除这个评论吗？
                                                 </div>
                                                 <div class="modal-footer">
                                                     <a class="btn btn-danger" style="background: red"
@@ -234,7 +234,7 @@ function deleteNotification(notificationId){
                                                     <h4 class="modal-title" id="myModalLabel">删除问题</h4>
                                                 </div>
                                                 <div class="modal-body">
-                                                    确定要删除这个问题吗？
+                                                    确定要删除这个通知吗？
                                                 </div>
                                                 <div class="modal-footer">
                                                     <a class="btn btn-danger" style="background: red"

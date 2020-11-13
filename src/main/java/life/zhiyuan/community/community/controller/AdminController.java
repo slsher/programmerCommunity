@@ -38,7 +38,7 @@ public class AdminController {
 
     @GetMapping("/admin")
     public String admin(){
-        return "redirect:/admin/user";
+        return "redirect:/admin/users";
     }
     @GetMapping("/admin/{action}")
     public String index(Model model,

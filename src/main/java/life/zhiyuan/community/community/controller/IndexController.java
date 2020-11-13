@@ -29,7 +29,7 @@ public class IndexController {
     public String index(Model model,
                         //计算页数 接受传入的参数
                         @RequestParam(name = "page", defaultValue = "1") Integer page,
-                        @RequestParam(name = "size", defaultValue = "10") Integer size,
+                        @RequestParam(name = "size", defaultValue = "8") Integer size,
                         @RequestParam(name = "search",required = false) String search) {
         //获取cookie 获取cookie中的token 然后在获取session
 

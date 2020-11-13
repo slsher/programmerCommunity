@@ -21,12 +21,12 @@
                         data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">后台管理系统</span>
                 </button>
-                <a class="navbar-brand" href="/admin">后台管理系统</a>
+                <a class="navbar-brand" href="/admin/users">后台管理系统</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a id="time" style="margin-right: 30px;color: #666666;font-size: 14px"></a>
+                        <a id="time" style="margin-right: 30px;color: #666666;font-size: 14px;font-weight: bold"></a>
                     </li>
 
                     <li th:if="${session.user != null}">
@@ -123,7 +123,7 @@
                         <!--搜索查询用户-->
                         <form class="navbar-form navbar-left" action="/admin/users" method="get">
                             <div class="form-group input-group">
-                                <input type="text" class="form-control" name="search" placeholder="搜索用户">
+                                <input type="text" class="form-control" name="search" placeholder="查询用户名">
                                 <span class="input-group-btn">
                             <button class="btn btn-default " type="submit">搜索</button>
                         </span>
@@ -216,7 +216,7 @@
                         <!--搜索查询-->
                         <form class="navbar-form navbar-left" action="/admin/questions" method="get">
                             <div class="form-group input-group">
-                                <input type="text" class="form-control" name="search" placeholder="搜索问题">
+                                <input type="text" class="form-control" name="search" placeholder="查询问题">
                                 <span class="input-group-btn">
                             <button class="btn btn-default " type="submit">搜索</button>
                         </span>
@@ -310,7 +310,7 @@
                         <!--搜索查询用户-->
                         <form class="navbar-form navbar-left" action="/admin/comments" method="get">
                             <div class="form-group input-group">
-                                <input type="text" class="form-control" name="search" placeholder="搜索用户">
+                                <input type="text" class="form-control" name="search" placeholder="查询用户Id">
                                 <span class="input-group-btn">
                             <button class="btn btn-default " type="submit">搜索</button>
                         </span>
@@ -400,7 +400,7 @@
                         <!--搜索同志人-->
                         <form class="navbar-form navbar-left" action="/admin/notification" method="get">
                             <div class="form-group input-group">
-                                <input type="text" class="form-control" name="search" placeholder="搜索用户名">
+                                <input type="text" class="form-control" name="search" placeholder="查询通知人">
                                 <span class="input-group-btn">
                             <button class="btn btn-default " type="submit">搜索</button>
                         </span>
