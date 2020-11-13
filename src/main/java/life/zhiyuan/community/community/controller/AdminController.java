@@ -10,6 +10,7 @@ import life.zhiyuan.community.community.model.User;
 import life.zhiyuan.community.community.service.CommentService;
 import life.zhiyuan.community.community.service.NotificationService;
 import life.zhiyuan.community.community.service.QuestionService;
+import life.zhiyuan.community.community.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,6 +32,9 @@ public class AdminController {
 
     @Autowired
     private NotificationService notificationService;
+
+    @Autowired
+    private UserService userService;
 
     @GetMapping("/admin")
     public String admin(){
@@ -70,7 +74,9 @@ public class AdminController {
             PaginationDTO paginationNotification = notificationService.list(search, page, size);
             model.addAttribute("paginationNotification", paginationNotification);
         } else {
-            model.addAttribute("section", "users");
+            PaginationDTO paginationUser = userService.list(search,page, size);
+            model.addAttribute("paginationUser", paginationUser);
+//            model.addAttribute("section", "users");
         }
 
         return "admin";

@@ -194,9 +194,9 @@ public class CommentService {
 
         PaginationDTO paginationDTO = new PaginationDTO();
 
-        CommentQueryDTO questionQueryDTO = new CommentQueryDTO();
-        questionQueryDTO.setSearch(search);
-        Integer totalCount =  commentExtMapper.countBySearch(questionQueryDTO);
+        CommentQueryDTO commentQueryDTO = new CommentQueryDTO();
+        commentQueryDTO.setSearch(search);
+        Integer totalCount =  commentExtMapper.countBySearch(commentQueryDTO);
 
         Integer totalPage;
         if (totalCount % size == 0) {
@@ -219,9 +219,9 @@ public class CommentService {
         // 计算页面公式 size*(page-1)
         Integer offset = size * (page - 1);
 
-        questionQueryDTO.setSize(size);
-        questionQueryDTO.setPage(offset);
-        List<Comment> comments = commentExtMapper.selectBySearch(questionQueryDTO);
+        commentQueryDTO.setSize(size);
+        commentQueryDTO.setPage(offset);
+        List<Comment> comments = commentExtMapper.selectBySearch(commentQueryDTO);
         List<CommentDTO> commentDTOList = new ArrayList<>();
 
         for (Comment comment : comments) {

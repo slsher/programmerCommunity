@@ -131,23 +131,23 @@
                             <th>操作</th>
                             </thead>
                             <tbody>
-                            <tr th:each="user1 : ${session.user.getId()}">
-                                <th th:text="${session.user.getId()}"></th>
-                                <td th:text="${session.user.getName()}"></td>
-                                <td th:text="${session.user.getToken()}">
+                            <tr th:each="user1 : ${paginationUser.data}">
+                                <th th:text="${user1.id}"></th>
+                                <td th:text="${user1.name}"></td>
+                                <td th:text="${user1.token}">
                                     <button type="button" class="btn btn-default" data-toggle="tooltip"
                                             data-placement="right" title="Tooltip on right">Tooltip on right
                                     </button>
                                 </td>
-                                <td th:text="${#dates.format(session.user.getGmtCreate(),'yyyy-MM-dd HH:mm')}"></td>
-                                <td th:text="${#dates.format(session.user.getGmtModified(),'yyyy-MM-dd HH:mm')}"></td>
+                                <td th:text="${#dates.format(user1.gmtCreate,'yyyy-MM-dd HH:mm')}"></td>
+                                <td th:text="${#dates.format(user1.gmtModified,'yyyy-MM-dd HH:mm')}"></td>
                                 <td>
-                                    <img th:src="${session.user.getAvatarUrl()}" class="media-object img-rounded">
+                                    <img th:src="${user1.avatarUrl}" class="media-object img-rounded">
                                 </td>
                                 <td>
                                     <!-- 删除模态框按钮 -->
                                     <a class="btn btn-danger btn-sm admin-btn-operation" style="background: red"
-                                       data-toggle="modal"  th:onclick="'deleteUser(' + ${session.user.getId()} + ');'"
+                                       data-toggle="modal"  th:onclick="'deleteUser(' + ${user1.id} + ');'"
                                        data-target="#userModel">
                                         删除
                                     </a>
