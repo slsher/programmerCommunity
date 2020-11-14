@@ -51,6 +51,10 @@ vim src/main/resources/application-production.properties
 - mvn clean compile package/mvn package
 - java -jar -Dspring.profiles.active=production target/community-0.0.1-SNAPSHOT.jar
 
+## 答辩网站
+* [ucloud](https://console.ucloud.cn/uhost/uhost)
+* [github登陆](https://github.com/settings/applications/1383090)
+* [知猿社区](http://123.58.211.164/)
 
 
 ## 资料
