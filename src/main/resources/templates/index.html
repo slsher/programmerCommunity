@@ -36,20 +36,25 @@
         <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" style="border-right:1px solid #DDDDDD;">
             <ul class="nav  nav-tabs active" role="tablist">
 
-                <li role="presentation"  th:class="${sort == 'no' ? 'active nav-tabs-li':'nav-tabs-li'}">
+                <li role="presentation" class="nav-tabs-li"
+                    th:classappend="${sort == 'no' ? 'active':''}">
                     <a th:href="@{/(sort='no')}" style="color: #E51C37">消灭零回复</a></li>
 
-                <li role="presentation" th:class="${sort == 'hot' ? 'active nav-tabs-li':'nav-tabs-li'}">
-                    <a th:href="@{/(sort='hot')}" >最热</a></li>
+                <li role="presentation" class="nav-tabs-li"
+                    th:classappend="${sort == 'hot' ? 'active ':''}">
+                    <a th:href="@{/(sort='hot')}">最热</a></li>
 
-                <li role="presentation" th:class="${sort == 'hot7' ? 'active nav-tabs-li':'nav-tabs-li'}">
+                <li role="presentation" class="nav-tabs-li"
+                    th:classappend="${sort == 'hot7' ? 'active':''}">
                     <a th:href="@{/(sort='hot7')}">7天最热</a></li>
 
-                <li role="presentation" th:class="${sort == 'hot30' ? 'active nav-tabs-li':'nav-tabs-li'}">
-                    <a th:href="@{/(sort='hot30')}" >30天最热</a></li>
+                <li role="presentation" class="nav-tabs-li"
+                    th:classappend="${sort == 'hot30' ? 'active':''}">
+                    <a th:href="@{/(sort='hot30')}">30天最热</a></li>
 
-                <li role="presentation" th:class="${sort == 'new' || sort == '' ? 'active nav-tabs-li ':'nav-tabs-li'}">
-                    <a th:href="@{/(sort='new')}" >最新</a></li>
+                <li role="presentation" class="nav-tabs-li"
+                    th:classappend="${sort == 'new' || sort == null ? 'active ':''}">
+                    <a th:href="@{/(sort='new')}">最新</a></li>
 
                 <h2 class="nav-tabs-h2">
                     <i class="glyphicon glyphicon-list"></i>
@@ -89,7 +94,8 @@
                     <nav aria-label="Page navigation">
                         <ul class="pagination">
                             <li th:if="${pagination.showFirstPage}">
-                                <a th:href="@{/(page=1,search=${search},tag=${tag},sort=${sort})}" aria-label="Previous">
+                                <a th:href="@{/(page=1,search=${search},tag=${tag},sort=${sort})}"
+                                   aria-label="Previous">
                                     <span aria-hidden="true">&lt;&lt;</span>
                                 </a>
                             </li>
@@ -100,8 +106,10 @@
                                 </a>
                             </li>
 
-                            <li th:each="page : ${pagination.pages}" th:class="${pagination.page == page}? 'active' : ''">
-                                <a th:href="@{/(page=${page},search=${search},tag=${tag},sort=${sort})}" th:text="${page}"></a>
+                            <li th:each="page : ${pagination.pages}"
+                                th:class="${pagination.page == page}? 'active' : ''">
+                                <a th:href="@{/(page=${page},search=${search},tag=${tag},sort=${sort})}"
+                                   th:text="${page}"></a>
                             </li>
 
                             <li th:if="${pagination.showNext}">
@@ -124,16 +132,16 @@
         </div>
         <!--右边布局 热门话题-->
         <div class="col-lg-3 col-md-3 hidden-xs hidden-sm index-leftPlace">
-                <!--扫码-->
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 media index-aside-code">
-                    <div class="media-left text-left">
-                        <img src="/images/wechat.png" class="media-object question-code img-thumbnail">
-                    </div>
-                    <a class="media-body text-center" id="index-code" data-toggle="popover" data-placement="bottom">
-                        <h4 class="media-heading">扫码知猿手机网页 ></h4>
-                        <div>随时随地发现和解决问题</div>
-                    </a>
+            <!--扫码-->
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 media index-aside-code">
+                <div class="media-left text-left">
+                    <img src="/images/wechat.png" class="media-object question-code img-thumbnail">
                 </div>
+                <a class="media-body text-center" id="index-code" data-toggle="popover" data-placement="bottom">
+                    <h4 class="media-heading">扫码知猿手机网页 ></h4>
+                    <div>随时随地发现和解决问题</div>
+                </a>
+            </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h4>热门标签</h4>
                 <a th:each="tag : ${tags}" th:href="@{/(page=1,search=${search},tag=${tag},sort=${sort})}"
