@@ -15,6 +15,12 @@ public interface QuestionExtMapper {
 
     int deleteByCreator(Question question);
 
+    List<Question> selectAdminRelated(Question question);
+
+    Integer countByAdminSearch(QuestionQueryDTO questionQueryDTO);
+
+    List<Question> selectByAdminSearch(QuestionQueryDTO questionQueryDTO);
+
     List<Question> selectRelated(Question question);
 
     Integer countBySearch(QuestionQueryDTO questionQueryDTO);
