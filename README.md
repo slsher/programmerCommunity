@@ -81,7 +81,7 @@ vim src/main/resources/application-production.properties
 * [flyway](https://flywaydb.org/documentation/getstarted/firststeps/maven)
 * [jquery](https://jquery.cuishifeng.cn/jQuery.getJSON.html)
 * [ucloud](https://console.ucloud.cn/ufile/ufile/detail?id=zhiyuan)
-
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 ## 脚本
 ``` sql 
 
