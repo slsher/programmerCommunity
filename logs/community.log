@@ -382,3 +382,964 @@
 2020-11-19 09:11:17.316  INFO 4708 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-11-19 09:11:17.317  INFO 4708 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2020-11-19 09:11:17.321  INFO 4708 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-02-09 10:35:29.529  INFO 13888 --- [main] l.z.c.c.CommunityApplicationTests        : Starting CommunityApplicationTests on DESKTOP-66VTR6R with PID 13888 (started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 10:35:29.530  INFO 13888 --- [main] l.z.c.c.CommunityApplicationTests        : No active profile set, falling back to default profiles: default
+2023-02-09 10:35:31.040  INFO 13888 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:35:31.163  INFO 13888 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 10:35:31.486  INFO 13888 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 10:35:31.555  INFO 13888 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 10:35:31 CST 2023
+2023-02-09 10:35:31.560  INFO 13888 --- [main] l.z.c.c.CommunityApplicationTests        : Started CommunityApplicationTests in 2.257 seconds (JVM running for 3.026)
+2023-02-09 10:35:31.600  INFO 13888 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 10:35:31.839  INFO 13888 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 10:35:31.840  INFO 13888 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:35:52.386  INFO 5160 --- [restartedMain] l.z.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-66VTR6R with PID 5160 (D:\code\programmerCommunity\target\classes started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 10:35:52.388  INFO 5160 --- [restartedMain] l.z.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2023-02-09 10:35:52.419  INFO 5160 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-09 10:35:52.419  INFO 5160 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-09 10:35:53.144  INFO 5160 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2023-02-09 10:35:53.150  INFO 5160 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-09 10:35:53.150  INFO 5160 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2023-02-09 10:35:53.214  INFO 5160 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-09 10:35:53.215  INFO 5160 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 796 ms
+2023-02-09 10:35:53.241  INFO 5160 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 10:35:53.311  INFO 5160 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-09 10:35:53.315  INFO 5160 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/community'
+2023-02-09 10:35:53.673  INFO 5160 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:35:53.713  INFO 5160 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 10:35:53.795  INFO 5160 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 10:35:54.106  INFO 5160 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-09 10:35:54.131  INFO 5160 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2023-02-09 10:35:54.137  INFO 5160 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 10:35:54 CST 2023
+2023-02-09 10:35:54.139  INFO 5160 --- [restartedMain] l.z.c.community.CommunityApplication     : Started CommunityApplication in 1.975 seconds (JVM running for 2.934)
+2023-02-09 10:35:54.183 ERROR 5160 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "QUESTION" not found; SQL statement:
+select
+     
+     
+    
+    ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, 
+    TAG
+   
+    from QUESTION [42102-200]
+### The error may exist in file [D:\code\programmerCommunity\target\classes\mapper\QuestionMapper.xml]
+### The error may involve life.zhiyuan.community.community.mapper.QuestionMapper.selectByExampleWithRowbounds
+### The error occurred while executing a query
+### SQL: select                      ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT,      TAG         from QUESTION
+### Cause: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "QUESTION" not found; SQL statement:
+select
+     
+     
+    
+    ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, 
+    TAG
+   
+    from QUESTION [42102-200]
+; bad SQL grammar []; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "QUESTION" not found; SQL statement:
+select
+     
+     
+    
+    ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, 
+    TAG
+   
+    from QUESTION [42102-200]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239) ~[spring-jdbc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72) ~[spring-jdbc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	at com.sun.proxy.$Proxy57.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:231) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:145) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93) ~[mybatis-3.5.3.jar:3.5.3]
+	at com.sun.proxy.$Proxy58.selectByExampleWithRowbounds(Unknown Source) ~[na:na]
+	at life.zhiyuan.community.community.schedule.HotTagTasks.hotTagSchedule(HotTagTasks.java:37) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_321]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_321]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_321]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_321]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_321]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) [na:1.8.0_321]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_321]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) [na:1.8.0_321]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_321]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_321]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_321]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "QUESTION" not found; SQL statement:
+select
+     
+     
+    
+    ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, 
+    TAG
+   
+    from QUESTION [42102-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:205) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:181) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7628) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.readTableFilter(Parser.java:1970) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2827) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseSelect(Parser.java:2959) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseQuerySub(Parser.java:2817) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2649) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseQuery(Parser.java:2620) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parsePrepared(Parser.java:868) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parse(Parser.java:843) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parse(Parser.java:815) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.prepareCommand(Parser.java:738) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Session.prepareLocal(Session.java:657) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Session.prepareCommand(Session.java:595) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:352) ~[h2-1.4.200.jar:1.4.200]
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:337) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java) ~[HikariCP-3.4.5.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:86) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:59) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:87) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) ~[mybatis-3.5.3.jar:3.5.3]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_321]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_321]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_321]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_321]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	... 20 common frames omitted
+
+2023-02-09 10:36:07.333  INFO 5160 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 10:36:07.334  INFO 5160 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:36:07.335  INFO 5160 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-09 10:36:07.336  INFO 5160 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-09 10:36:57.163  INFO 1400 --- [main] l.z.c.community.CommunityApplication     : Starting CommunityApplication v0.0.1-SNAPSHOT on DESKTOP-66VTR6R with PID 1400 (D:\code\programmerCommunity\target\community-0.0.1-SNAPSHOT.jar started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 10:36:57.167  INFO 1400 --- [main] l.z.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2023-02-09 10:36:59.325  INFO 1400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2023-02-09 10:36:59.338  INFO 1400 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-09 10:36:59.338  INFO 1400 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2023-02-09 10:36:59.418  INFO 1400 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-09 10:36:59.418  INFO 1400 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2163 ms
+2023-02-09 10:37:00.230  INFO 1400 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:37:00.391  INFO 1400 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 10:37:00.622  INFO 1400 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 10:37:00.691  INFO 1400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2023-02-09 10:37:00.701  INFO 1400 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 10:37:00 CST 2023
+2023-02-09 10:37:00.705  INFO 1400 --- [main] l.z.c.community.CommunityApplication     : Started CommunityApplication in 4.1 seconds (JVM running for 4.712)
+2023-02-09 10:37:00.734  INFO 1400 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 10:37:01.015  INFO 1400 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-09 10:37:01.070 ERROR 1400 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "QUESTION" not found; SQL statement:
+select
+     
+     
+    
+    ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, 
+    TAG
+   
+    from QUESTION [42102-200]
+### The error may exist in class path resource [mapper/QuestionMapper.xml]
+### The error may involve life.zhiyuan.community.community.mapper.QuestionMapper.selectByExampleWithRowbounds
+### The error occurred while executing a query
+### SQL: select                      ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT,      TAG         from QUESTION
+### Cause: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "QUESTION" not found; SQL statement:
+select
+     
+     
+    
+    ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, 
+    TAG
+   
+    from QUESTION [42102-200]
+; bad SQL grammar []; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "QUESTION" not found; SQL statement:
+select
+     
+     
+    
+    ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, 
+    TAG
+   
+    from QUESTION [42102-200]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239) ~[spring-jdbc-5.2.9.RELEASE.jar!/:5.2.9.RELEASE]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72) ~[spring-jdbc-5.2.9.RELEASE.jar!/:5.2.9.RELEASE]
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88) ~[mybatis-spring-2.0.3.jar!/:2.0.3]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440) ~[mybatis-spring-2.0.3.jar!/:2.0.3]
+	at com.sun.proxy.$Proxy51.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:231) ~[mybatis-spring-2.0.3.jar!/:2.0.3]
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:145) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at com.sun.proxy.$Proxy52.selectByExampleWithRowbounds(Unknown Source) ~[na:na]
+	at life.zhiyuan.community.community.schedule.HotTagTasks.hotTagSchedule(HotTagTasks.java:37) ~[classes!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_321]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_321]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_321]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_321]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.2.9.RELEASE.jar!/:5.2.9.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.2.9.RELEASE.jar!/:5.2.9.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [na:1.8.0_321]
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source) [na:1.8.0_321]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source) [na:1.8.0_321]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) [na:1.8.0_321]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_321]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_321]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_321]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "QUESTION" not found; SQL statement:
+select
+     
+     
+    
+    ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, 
+    TAG
+   
+    from QUESTION [42102-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453) ~[h2-1.4.200.jar!/:na]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429) ~[h2-1.4.200.jar!/:na]
+	at org.h2.message.DbException.get(DbException.java:205) ~[h2-1.4.200.jar!/:na]
+	at org.h2.message.DbException.get(DbException.java:181) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7628) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.readTableFilter(Parser.java:1970) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2827) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parseSelect(Parser.java:2959) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parseQuerySub(Parser.java:2817) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2649) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parseQuery(Parser.java:2620) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parsePrepared(Parser.java:868) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parse(Parser.java:843) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parse(Parser.java:815) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.prepareCommand(Parser.java:738) ~[h2-1.4.200.jar!/:na]
+	at org.h2.engine.Session.prepareLocal(Session.java:657) ~[h2-1.4.200.jar!/:na]
+	at org.h2.engine.Session.prepareCommand(Session.java:595) ~[h2-1.4.200.jar!/:na]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235) ~[h2-1.4.200.jar!/:na]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76) ~[h2-1.4.200.jar!/:na]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:352) ~[h2-1.4.200.jar!/:na]
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:337) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java) ~[HikariCP-3.4.5.jar!/:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:86) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:59) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:87) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_321]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_321]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_321]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_321]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.3.jar!/:2.0.3]
+	... 20 common frames omitted
+
+2023-02-09 10:37:07.317  INFO 1400 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-09 10:37:07.317  INFO 1400 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-09 10:37:07.326  INFO 1400 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2023-02-09 10:38:16.550  INFO 1400 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 10:38:16.551  INFO 1400 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:38:16.552  INFO 1400 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-09 10:38:16.554  INFO 1400 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-09 10:39:48.468  INFO 15424 --- [main] l.z.c.c.CommunityApplicationTests        : Starting CommunityApplicationTests on DESKTOP-66VTR6R with PID 15424 (started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 10:39:48.469  INFO 15424 --- [main] l.z.c.c.CommunityApplicationTests        : No active profile set, falling back to default profiles: default
+2023-02-09 10:39:50.003  INFO 15424 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:39:50.132  INFO 15424 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 10:39:50.462  INFO 15424 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 10:39:50.517  INFO 15424 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 10:39:50 CST 2023
+2023-02-09 10:39:50.521  INFO 15424 --- [main] l.z.c.c.CommunityApplicationTests        : Started CommunityApplicationTests in 2.254 seconds (JVM running for 2.983)
+2023-02-09 10:39:50.559  INFO 15424 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 10:39:50.781  INFO 15424 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 10:39:50.782  INFO 15424 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:40:19.933  INFO 15708 --- [main] l.z.c.community.CommunityApplication     : Starting CommunityApplication v0.0.1-SNAPSHOT on DESKTOP-66VTR6R with PID 15708 (D:\code\programmerCommunity\target\community-0.0.1-SNAPSHOT.jar started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 10:40:19.936  INFO 15708 --- [main] l.z.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2023-02-09 10:40:21.958  INFO 15708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2023-02-09 10:40:21.969  INFO 15708 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-09 10:40:21.969  INFO 15708 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2023-02-09 10:40:22.049  INFO 15708 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-09 10:40:22.049  INFO 15708 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2031 ms
+2023-02-09 10:40:22.776  INFO 15708 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:40:22.931  INFO 15708 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 10:40:23.128  INFO 15708 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 10:40:23.188  INFO 15708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2023-02-09 10:40:23.197  INFO 15708 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 10:40:23 CST 2023
+2023-02-09 10:40:23.200  INFO 15708 --- [main] l.z.c.community.CommunityApplication     : Started CommunityApplication in 3.757 seconds (JVM running for 4.206)
+2023-02-09 10:40:23.229  INFO 15708 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 10:40:23.482  INFO 15708 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-09 10:40:23.536 ERROR 15708 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "QUESTION" not found; SQL statement:
+select
+     
+     
+    
+    ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, 
+    TAG
+   
+    from QUESTION [42102-200]
+### The error may exist in class path resource [mapper/QuestionMapper.xml]
+### The error may involve life.zhiyuan.community.community.mapper.QuestionMapper.selectByExampleWithRowbounds
+### The error occurred while executing a query
+### SQL: select                      ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT,      TAG         from QUESTION
+### Cause: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "QUESTION" not found; SQL statement:
+select
+     
+     
+    
+    ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, 
+    TAG
+   
+    from QUESTION [42102-200]
+; bad SQL grammar []; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "QUESTION" not found; SQL statement:
+select
+     
+     
+    
+    ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, 
+    TAG
+   
+    from QUESTION [42102-200]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239) ~[spring-jdbc-5.2.9.RELEASE.jar!/:5.2.9.RELEASE]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72) ~[spring-jdbc-5.2.9.RELEASE.jar!/:5.2.9.RELEASE]
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88) ~[mybatis-spring-2.0.3.jar!/:2.0.3]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440) ~[mybatis-spring-2.0.3.jar!/:2.0.3]
+	at com.sun.proxy.$Proxy51.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:231) ~[mybatis-spring-2.0.3.jar!/:2.0.3]
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:145) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at com.sun.proxy.$Proxy52.selectByExampleWithRowbounds(Unknown Source) ~[na:na]
+	at life.zhiyuan.community.community.schedule.HotTagTasks.hotTagSchedule(HotTagTasks.java:37) ~[classes!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_321]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_321]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_321]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_321]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.2.9.RELEASE.jar!/:5.2.9.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.2.9.RELEASE.jar!/:5.2.9.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [na:1.8.0_321]
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source) [na:1.8.0_321]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source) [na:1.8.0_321]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) [na:1.8.0_321]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_321]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_321]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_321]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "QUESTION" not found; SQL statement:
+select
+     
+     
+    
+    ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, 
+    TAG
+   
+    from QUESTION [42102-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453) ~[h2-1.4.200.jar!/:na]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429) ~[h2-1.4.200.jar!/:na]
+	at org.h2.message.DbException.get(DbException.java:205) ~[h2-1.4.200.jar!/:na]
+	at org.h2.message.DbException.get(DbException.java:181) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7628) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.readTableFilter(Parser.java:1970) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2827) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parseSelect(Parser.java:2959) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parseQuerySub(Parser.java:2817) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2649) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parseQuery(Parser.java:2620) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parsePrepared(Parser.java:868) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parse(Parser.java:843) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parse(Parser.java:815) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.prepareCommand(Parser.java:738) ~[h2-1.4.200.jar!/:na]
+	at org.h2.engine.Session.prepareLocal(Session.java:657) ~[h2-1.4.200.jar!/:na]
+	at org.h2.engine.Session.prepareCommand(Session.java:595) ~[h2-1.4.200.jar!/:na]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235) ~[h2-1.4.200.jar!/:na]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76) ~[h2-1.4.200.jar!/:na]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:352) ~[h2-1.4.200.jar!/:na]
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:337) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java) ~[HikariCP-3.4.5.jar!/:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:86) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:59) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:87) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_321]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_321]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_321]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_321]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.3.jar!/:2.0.3]
+	... 20 common frames omitted
+
+2023-02-09 10:40:25.672  INFO 15708 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-09 10:40:25.673  INFO 15708 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-09 10:40:25.681  INFO 15708 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2023-02-09 10:41:59.158  INFO 15708 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 10:41:59.159  INFO 15708 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:41:59.159  INFO 15708 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-09 10:41:59.161  INFO 15708 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-09 10:42:01.107  INFO 14728 --- [main] l.z.c.community.CommunityApplication     : Starting CommunityApplication v0.0.1-SNAPSHOT on DESKTOP-66VTR6R with PID 14728 (D:\code\programmerCommunity\target\community-0.0.1-SNAPSHOT.jar started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 10:42:01.110  INFO 14728 --- [main] l.z.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2023-02-09 10:42:03.128  INFO 14728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2023-02-09 10:42:03.138  INFO 14728 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-09 10:42:03.139  INFO 14728 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2023-02-09 10:42:03.210  INFO 14728 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-09 10:42:03.210  INFO 14728 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2018 ms
+2023-02-09 10:42:03.945  INFO 14728 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:42:04.094  INFO 14728 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 10:42:04.270  INFO 14728 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 10:42:04.328  INFO 14728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2023-02-09 10:42:04.337  INFO 14728 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 10:42:04 CST 2023
+2023-02-09 10:42:04.339  INFO 14728 --- [main] l.z.c.community.CommunityApplication     : Started CommunityApplication in 3.726 seconds (JVM running for 4.181)
+2023-02-09 10:42:04.370  INFO 14728 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 10:42:04.617  INFO 14728 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-09 10:42:04.670 ERROR 14728 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "QUESTION" not found; SQL statement:
+select
+     
+     
+    
+    ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, 
+    TAG
+   
+    from QUESTION [42102-200]
+### The error may exist in class path resource [mapper/QuestionMapper.xml]
+### The error may involve life.zhiyuan.community.community.mapper.QuestionMapper.selectByExampleWithRowbounds
+### The error occurred while executing a query
+### SQL: select                      ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT,      TAG         from QUESTION
+### Cause: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "QUESTION" not found; SQL statement:
+select
+     
+     
+    
+    ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, 
+    TAG
+   
+    from QUESTION [42102-200]
+; bad SQL grammar []; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "QUESTION" not found; SQL statement:
+select
+     
+     
+    
+    ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, 
+    TAG
+   
+    from QUESTION [42102-200]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239) ~[spring-jdbc-5.2.9.RELEASE.jar!/:5.2.9.RELEASE]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72) ~[spring-jdbc-5.2.9.RELEASE.jar!/:5.2.9.RELEASE]
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88) ~[mybatis-spring-2.0.3.jar!/:2.0.3]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440) ~[mybatis-spring-2.0.3.jar!/:2.0.3]
+	at com.sun.proxy.$Proxy51.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:231) ~[mybatis-spring-2.0.3.jar!/:2.0.3]
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:145) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at com.sun.proxy.$Proxy52.selectByExampleWithRowbounds(Unknown Source) ~[na:na]
+	at life.zhiyuan.community.community.schedule.HotTagTasks.hotTagSchedule(HotTagTasks.java:37) ~[classes!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_321]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_321]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_321]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_321]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.2.9.RELEASE.jar!/:5.2.9.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.2.9.RELEASE.jar!/:5.2.9.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [na:1.8.0_321]
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source) [na:1.8.0_321]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source) [na:1.8.0_321]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) [na:1.8.0_321]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_321]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_321]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_321]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "QUESTION" not found; SQL statement:
+select
+     
+     
+    
+    ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, 
+    TAG
+   
+    from QUESTION [42102-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453) ~[h2-1.4.200.jar!/:na]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429) ~[h2-1.4.200.jar!/:na]
+	at org.h2.message.DbException.get(DbException.java:205) ~[h2-1.4.200.jar!/:na]
+	at org.h2.message.DbException.get(DbException.java:181) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7628) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.readTableFilter(Parser.java:1970) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2827) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parseSelect(Parser.java:2959) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parseQuerySub(Parser.java:2817) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2649) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parseQuery(Parser.java:2620) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parsePrepared(Parser.java:868) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parse(Parser.java:843) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.parse(Parser.java:815) ~[h2-1.4.200.jar!/:na]
+	at org.h2.command.Parser.prepareCommand(Parser.java:738) ~[h2-1.4.200.jar!/:na]
+	at org.h2.engine.Session.prepareLocal(Session.java:657) ~[h2-1.4.200.jar!/:na]
+	at org.h2.engine.Session.prepareCommand(Session.java:595) ~[h2-1.4.200.jar!/:na]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235) ~[h2-1.4.200.jar!/:na]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76) ~[h2-1.4.200.jar!/:na]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:352) ~[h2-1.4.200.jar!/:na]
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:337) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java) ~[HikariCP-3.4.5.jar!/:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:86) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:59) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:87) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) ~[mybatis-3.5.3.jar!/:3.5.3]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_321]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_321]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_321]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_321]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.3.jar!/:2.0.3]
+	... 20 common frames omitted
+
+2023-02-09 10:44:27.489  INFO 14728 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 10:44:27.490  INFO 14728 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:44:27.490  INFO 14728 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-09 10:44:27.492  INFO 14728 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-09 10:44:58.422  INFO 8432 --- [main] l.z.c.c.CommunityApplicationTests        : Starting CommunityApplicationTests on DESKTOP-66VTR6R with PID 8432 (started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 10:44:58.423  INFO 8432 --- [main] l.z.c.c.CommunityApplicationTests        : No active profile set, falling back to default profiles: default
+2023-02-09 10:44:59.829  INFO 8432 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:44:59.942  INFO 8432 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 10:45:00.272  INFO 8432 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 10:45:00.331  INFO 8432 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 10:45:00 CST 2023
+2023-02-09 10:45:00.334  INFO 8432 --- [main] l.z.c.c.CommunityApplicationTests        : Started CommunityApplicationTests in 2.11 seconds (JVM running for 2.826)
+2023-02-09 10:45:00.371  INFO 8432 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 10:45:00.560  INFO 8432 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 10:45:00.561  INFO 8432 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:45:27.337  INFO 9296 --- [main] l.z.c.community.CommunityApplication     : Starting CommunityApplication v0.0.1-SNAPSHOT on DESKTOP-66VTR6R with PID 9296 (D:\code\programmerCommunity\target\community-0.0.1-SNAPSHOT.jar started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 10:45:27.339  INFO 9296 --- [main] l.z.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2023-02-09 10:45:29.343  INFO 9296 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2023-02-09 10:45:29.352  INFO 9296 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-09 10:45:29.354  INFO 9296 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2023-02-09 10:45:29.423  INFO 9296 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-09 10:45:29.424  INFO 9296 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2004 ms
+2023-02-09 10:45:30.134  INFO 9296 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:45:30.279  INFO 9296 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 10:45:30.446  INFO 9296 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 10:45:30.507  INFO 9296 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2023-02-09 10:45:30.516  INFO 9296 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 10:45:30 CST 2023
+2023-02-09 10:45:30.518  INFO 9296 --- [main] l.z.c.community.CommunityApplication     : Started CommunityApplication in 3.669 seconds (JVM running for 4.108)
+2023-02-09 10:45:30.548  INFO 9296 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 10:45:30.805  INFO 9296 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-09 10:45:30.830  INFO 9296 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule stop Thu Feb 09 10:45:30 CST 2023
+2023-02-09 10:45:40.349  INFO 9296 --- [http-nio-8887-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-09 10:45:40.349  INFO 9296 --- [http-nio-8887-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-09 10:45:40.356  INFO 9296 --- [http-nio-8887-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-02-09 10:51:28.174  INFO 9296 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 10:51:28.175  INFO 9296 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:51:28.175  INFO 9296 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-09 10:51:28.177  INFO 9296 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-09 10:51:40.127  INFO 6040 --- [main] l.z.c.c.CommunityApplicationTests        : Starting CommunityApplicationTests on DESKTOP-66VTR6R with PID 6040 (started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 10:51:40.128  INFO 6040 --- [main] l.z.c.c.CommunityApplicationTests        : No active profile set, falling back to default profiles: default
+2023-02-09 10:51:41.481  INFO 6040 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:51:41.607  INFO 6040 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 10:51:41.933  INFO 6040 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 10:51:41.992  INFO 6040 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 10:51:41 CST 2023
+2023-02-09 10:51:41.995  INFO 6040 --- [main] l.z.c.c.CommunityApplicationTests        : Started CommunityApplicationTests in 2.065 seconds (JVM running for 2.749)
+2023-02-09 10:51:42.037  INFO 6040 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 10:51:42.219  INFO 6040 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 10:51:42.219  INFO 6040 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:52:02.452  INFO 16264 --- [main] l.z.c.c.CommunityApplicationTests        : Starting CommunityApplicationTests on DESKTOP-66VTR6R with PID 16264 (started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 10:52:02.453  INFO 16264 --- [main] l.z.c.c.CommunityApplicationTests        : No active profile set, falling back to default profiles: default
+2023-02-09 10:52:03.785  INFO 16264 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:52:03.912  INFO 16264 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 10:52:04.228  INFO 16264 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 10:52:04.293  INFO 16264 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 10:52:04 CST 2023
+2023-02-09 10:52:04.299  INFO 16264 --- [main] l.z.c.c.CommunityApplicationTests        : Started CommunityApplicationTests in 2.052 seconds (JVM running for 2.731)
+2023-02-09 10:52:04.338  INFO 16264 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 10:52:04.517  INFO 16264 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 10:52:04.518  INFO 16264 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:52:24.718  INFO 8552 --- [main] l.z.c.c.CommunityApplicationTests        : Starting CommunityApplicationTests on DESKTOP-66VTR6R with PID 8552 (started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 10:52:24.719  INFO 8552 --- [main] l.z.c.c.CommunityApplicationTests        : No active profile set, falling back to default profiles: default
+2023-02-09 10:52:26.077  INFO 8552 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:52:26.191  INFO 8552 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 10:52:26.483  INFO 8552 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 10:52:26.545  INFO 8552 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 10:52:26 CST 2023
+2023-02-09 10:52:26.549  INFO 8552 --- [main] l.z.c.c.CommunityApplicationTests        : Started CommunityApplicationTests in 2.025 seconds (JVM running for 2.707)
+2023-02-09 10:52:26.588  INFO 8552 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 10:52:26.795  INFO 8552 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 10:52:26.796  INFO 8552 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:52:33.039  INFO 3820 --- [main] l.z.c.community.CommunityApplication     : Starting CommunityApplication v0.0.1-SNAPSHOT on DESKTOP-66VTR6R with PID 3820 (D:\code\programmerCommunity\target\community-0.0.1-SNAPSHOT.jar started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 10:52:33.042  INFO 3820 --- [main] l.z.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2023-02-09 10:52:35.142  INFO 3820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2023-02-09 10:52:35.157  INFO 3820 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-09 10:52:35.158  INFO 3820 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2023-02-09 10:52:35.252  INFO 3820 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-09 10:52:35.252  INFO 3820 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2129 ms
+2023-02-09 10:52:36.077  INFO 3820 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:52:36.249  INFO 3820 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 10:52:36.437  INFO 3820 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 10:52:36.492  INFO 3820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2023-02-09 10:52:36.501  INFO 3820 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 10:52:36 CST 2023
+2023-02-09 10:52:36.503  INFO 3820 --- [main] l.z.c.community.CommunityApplication     : Started CommunityApplication in 3.946 seconds (JVM running for 4.384)
+2023-02-09 10:52:36.532  INFO 3820 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 10:52:36.712  INFO 3820 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-09 10:52:36.713  INFO 3820 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-09 10:52:36.723  INFO 3820 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2023-02-09 10:52:36.804  INFO 3820 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-09 10:52:36.835  INFO 3820 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule stop Thu Feb 09 10:52:36 CST 2023
+2023-02-09 10:53:57.754  INFO 3820 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 10:53:57.755  INFO 3820 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:53:57.755  INFO 3820 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-09 10:53:57.757  INFO 3820 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-09 10:54:05.137  INFO 8672 --- [main] l.z.c.c.CommunityApplicationTests        : Starting CommunityApplicationTests on DESKTOP-66VTR6R with PID 8672 (started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 10:54:05.138  INFO 8672 --- [main] l.z.c.c.CommunityApplicationTests        : No active profile set, falling back to default profiles: default
+2023-02-09 10:54:06.523  INFO 8672 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:54:06.651  INFO 8672 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 10:54:06.983  INFO 8672 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 10:54:07.045  INFO 8672 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 10:54:07 CST 2023
+2023-02-09 10:54:07.049  INFO 8672 --- [main] l.z.c.c.CommunityApplicationTests        : Started CommunityApplicationTests in 2.107 seconds (JVM running for 2.795)
+2023-02-09 10:54:07.083  INFO 8672 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 10:54:07.273  INFO 8672 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 10:54:07.273  INFO 8672 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:54:41.248  INFO 20256 --- [main] l.z.c.c.CommunityApplicationTests        : Starting CommunityApplicationTests on DESKTOP-66VTR6R with PID 20256 (started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 10:54:41.249  INFO 20256 --- [main] l.z.c.c.CommunityApplicationTests        : No active profile set, falling back to default profiles: default
+2023-02-09 10:54:42.587  INFO 20256 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:54:42.717  INFO 20256 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 10:54:43.053  INFO 20256 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 10:54:43.117  INFO 20256 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 10:54:43 CST 2023
+2023-02-09 10:54:43.121  INFO 20256 --- [main] l.z.c.c.CommunityApplicationTests        : Started CommunityApplicationTests in 2.07 seconds (JVM running for 2.748)
+2023-02-09 10:54:43.158  INFO 20256 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 10:54:43.343  INFO 20256 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 10:54:43.344  INFO 20256 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:54:49.711  INFO 14908 --- [main] l.z.c.community.CommunityApplication     : Starting CommunityApplication v0.0.1-SNAPSHOT on DESKTOP-66VTR6R with PID 14908 (D:\code\programmerCommunity\target\community-0.0.1-SNAPSHOT.jar started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 10:54:49.713  INFO 14908 --- [main] l.z.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2023-02-09 10:54:51.738  INFO 14908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2023-02-09 10:54:51.748  INFO 14908 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-09 10:54:51.748  INFO 14908 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2023-02-09 10:54:51.819  INFO 14908 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-09 10:54:51.819  INFO 14908 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2023 ms
+2023-02-09 10:54:52.544  INFO 14908 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 10:54:52.689  INFO 14908 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 10:54:52.859  INFO 14908 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 10:54:52.916  INFO 14908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2023-02-09 10:54:52.925  INFO 14908 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 10:54:52 CST 2023
+2023-02-09 10:54:52.927  INFO 14908 --- [main] l.z.c.community.CommunityApplication     : Started CommunityApplication in 3.704 seconds (JVM running for 4.141)
+2023-02-09 10:54:52.955  INFO 14908 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 10:54:53.212  INFO 14908 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-09 10:54:53.236  INFO 14908 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule stop Thu Feb 09 10:54:53 CST 2023
+2023-02-09 10:55:00.968  INFO 14908 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-09 10:55:00.969  INFO 14908 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-09 10:55:00.995  INFO 14908 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 26 ms
+2023-02-09 11:05:42.342  INFO 14908 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 11:05:42.342  INFO 14908 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:05:42.343  INFO 14908 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-09 11:05:42.345  INFO 14908 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-09 11:06:42.948  INFO 16752 --- [main] l.z.c.c.CommunityApplicationTests        : Starting CommunityApplicationTests on DESKTOP-66VTR6R with PID 16752 (started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 11:06:42.949  INFO 16752 --- [main] l.z.c.c.CommunityApplicationTests        : No active profile set, falling back to default profiles: default
+2023-02-09 11:06:44.286  INFO 16752 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:06:44.399  INFO 16752 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 11:06:44.715  INFO 16752 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 11:06:44.780  INFO 16752 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 11:06:44 CST 2023
+2023-02-09 11:06:44.784  INFO 16752 --- [main] l.z.c.c.CommunityApplicationTests        : Started CommunityApplicationTests in 2.031 seconds (JVM running for 2.716)
+2023-02-09 11:06:44.824  INFO 16752 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 11:06:45.008  INFO 16752 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 11:06:45.009  INFO 16752 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:07:20.969  INFO 17800 --- [main] l.z.c.c.CommunityApplicationTests        : Starting CommunityApplicationTests on DESKTOP-66VTR6R with PID 17800 (started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 11:07:20.970  INFO 17800 --- [main] l.z.c.c.CommunityApplicationTests        : No active profile set, falling back to default profiles: default
+2023-02-09 11:07:22.331  INFO 17800 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:07:22.442  INFO 17800 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 11:07:22.760  INFO 17800 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 11:07:22.818  INFO 17800 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 11:07:22 CST 2023
+2023-02-09 11:07:22.822  INFO 17800 --- [main] l.z.c.c.CommunityApplicationTests        : Started CommunityApplicationTests in 2.046 seconds (JVM running for 2.721)
+2023-02-09 11:07:22.854  INFO 17800 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 11:07:23.028  INFO 17800 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 11:07:23.029  INFO 17800 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:07:31.066  INFO 8432 --- [main] l.z.c.community.CommunityApplication     : Starting CommunityApplication v0.0.1-SNAPSHOT on DESKTOP-66VTR6R with PID 8432 (D:\code\programmerCommunity\target\community-0.0.1-SNAPSHOT.jar started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 11:07:31.069  INFO 8432 --- [main] l.z.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2023-02-09 11:07:33.105  INFO 8432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2023-02-09 11:07:33.116  INFO 8432 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-09 11:07:33.117  INFO 8432 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2023-02-09 11:07:33.189  INFO 8432 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-09 11:07:33.189  INFO 8432 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2033 ms
+2023-02-09 11:07:33.916  INFO 8432 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:07:34.066  INFO 8432 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 11:07:34.265  INFO 8432 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 11:07:34.319  INFO 8432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2023-02-09 11:07:34.328  INFO 8432 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 11:07:34 CST 2023
+2023-02-09 11:07:34.331  INFO 8432 --- [main] l.z.c.community.CommunityApplication     : Started CommunityApplication in 3.76 seconds (JVM running for 4.2)
+2023-02-09 11:07:34.361  INFO 8432 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 11:07:34.630  INFO 8432 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-09 11:07:34.656  INFO 8432 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule stop Thu Feb 09 11:07:34 CST 2023
+2023-02-09 11:07:51.074  INFO 8432 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-09 11:07:51.074  INFO 8432 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-09 11:07:51.083  INFO 8432 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2023-02-09 11:11:35.215  INFO 1096 --- [restartedMain] l.z.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-66VTR6R with PID 1096 (D:\code\programmerCommunity\target\classes started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 11:11:35.217  INFO 1096 --- [restartedMain] l.z.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2023-02-09 11:11:35.252  INFO 1096 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-09 11:11:35.252  INFO 1096 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-09 11:11:35.982  INFO 1096 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2023-02-09 11:11:35.988  INFO 1096 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-09 11:11:35.989  INFO 1096 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2023-02-09 11:11:36.051  INFO 1096 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-09 11:11:36.052  INFO 1096 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 800 ms
+2023-02-09 11:11:36.077  INFO 1096 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 11:11:37.127 ERROR 1096 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:194) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.mvstore.db.MVTableEngine$Store.convertIllegalStateException(MVTableEngine.java:206) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:182) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Database.getPageStore(Database.java:2659) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Database.open(Database.java:675) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Database.openDatabase(Database.java:307) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Database.<init>(Database.java:301) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Engine.openSession(Engine.java:74) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Engine.openSession(Engine.java:192) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Engine.createSession(Engine.java:166) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Engine.createSession(Engine.java:29) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.Driver.connect(Driver.java:69) ~[h2-1.4.200.jar:1.4.200]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-3.4.5.jar:na]
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.lambda$h2Console$0(H2ConsoleAutoConfiguration.java:73) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.beans.factory.ObjectProvider.ifAvailable(ObjectProvider.java:93) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.h2Console(H2ConsoleAutoConfiguration.java:72) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_321]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_321]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_321]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_321]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:202) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:96) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:85) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:255) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:229) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5128) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_321]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) ~[na:1.8.0_321]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:843) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_321]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) ~[na:1.8.0_321]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:437) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:178) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:158) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at life.zhiyuan.community.community.CommunityApplication.main(CommunityApplication.java:14) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_321]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_321]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_321]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_321]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Lenovo/community.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.mvstore.FileStore.open(FileStore.java:172) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170) ~[h2-1.4.200.jar:1.4.200]
+	... 89 common frames omitted
+
+2023-02-09 11:11:37.492  INFO 1096 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:11:37.570  INFO 1096 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 11:11:37.661  INFO 1096 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 11:11:37.971  INFO 1096 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-09 11:11:37.989  WARN 1096 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8887 is already in use
+2023-02-09 11:11:37.990  INFO 1096 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 11:11:37.991  INFO 1096 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:11:37.993  INFO 1096 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-09 11:11:38.001  INFO 1096 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-09 11:11:38.004 ERROR 1096 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8887 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8887 or configure this application to listen on another port.
+
+2023-02-09 11:11:44.644  INFO 8432 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 11:11:44.645  INFO 8432 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:11:44.646  INFO 8432 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-09 11:11:44.647  INFO 8432 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-09 11:11:51.338  INFO 17728 --- [main] l.z.c.c.CommunityApplicationTests        : Starting CommunityApplicationTests on DESKTOP-66VTR6R with PID 17728 (started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 11:11:51.339  INFO 17728 --- [main] l.z.c.c.CommunityApplicationTests        : No active profile set, falling back to default profiles: default
+2023-02-09 11:11:52.723  INFO 17728 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:11:52.846  INFO 17728 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 11:11:53.184  INFO 17728 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 11:11:53.255  INFO 17728 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 11:11:53 CST 2023
+2023-02-09 11:11:53.259  INFO 17728 --- [main] l.z.c.c.CommunityApplicationTests        : Started CommunityApplicationTests in 2.118 seconds (JVM running for 2.806)
+2023-02-09 11:11:53.308  INFO 17728 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 11:11:53.483  INFO 17728 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 11:11:53.484  INFO 17728 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:13:03.530  INFO 7280 --- [main] l.z.c.c.CommunityApplicationTests        : Starting CommunityApplicationTests on DESKTOP-66VTR6R with PID 7280 (started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 11:13:03.531  INFO 7280 --- [main] l.z.c.c.CommunityApplicationTests        : No active profile set, falling back to default profiles: default
+2023-02-09 11:13:04.951  INFO 7280 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:13:05.078  INFO 7280 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 11:13:05.412  INFO 7280 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 11:13:05.479  INFO 7280 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 11:13:05 CST 2023
+2023-02-09 11:13:05.484  INFO 7280 --- [main] l.z.c.c.CommunityApplicationTests        : Started CommunityApplicationTests in 2.155 seconds (JVM running for 2.851)
+2023-02-09 11:13:05.522  INFO 7280 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 11:13:05.733  INFO 7280 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 11:13:05.734  INFO 7280 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:13:12.132  INFO 17728 --- [main] l.z.c.community.CommunityApplication     : Starting CommunityApplication v0.0.1-SNAPSHOT on DESKTOP-66VTR6R with PID 17728 (D:\code\programmerCommunity\target\community-0.0.1-SNAPSHOT.jar started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 11:13:12.135  INFO 17728 --- [main] l.z.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2023-02-09 11:13:14.184  INFO 17728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2023-02-09 11:13:14.195  INFO 17728 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-09 11:13:14.195  INFO 17728 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2023-02-09 11:13:14.267  INFO 17728 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-09 11:13:14.267  INFO 17728 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2044 ms
+2023-02-09 11:13:15.012  INFO 17728 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:13:15.151  INFO 17728 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 11:13:15.326  INFO 17728 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 11:13:15.388  INFO 17728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2023-02-09 11:13:15.398  INFO 17728 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 11:13:15 CST 2023
+2023-02-09 11:13:15.401  INFO 17728 --- [main] l.z.c.community.CommunityApplication     : Started CommunityApplication in 3.768 seconds (JVM running for 4.22)
+2023-02-09 11:13:15.432  INFO 17728 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 11:13:15.699  INFO 17728 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-09 11:13:15.724  INFO 17728 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule stop Thu Feb 09 11:13:15 CST 2023
+2023-02-09 11:13:20.334  INFO 17728 --- [http-nio-8887-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-09 11:13:20.335  INFO 17728 --- [http-nio-8887-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-09 11:13:20.344  INFO 17728 --- [http-nio-8887-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2023-02-09 11:13:40.929  INFO 17728 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 11:13:40.930  INFO 17728 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:13:40.930  INFO 17728 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-09 11:13:40.932  INFO 17728 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-09 11:13:47.438  INFO 19760 --- [main] l.z.c.c.CommunityApplicationTests        : Starting CommunityApplicationTests on DESKTOP-66VTR6R with PID 19760 (started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 11:13:47.439  INFO 19760 --- [main] l.z.c.c.CommunityApplicationTests        : No active profile set, falling back to default profiles: default
+2023-02-09 11:13:48.857  INFO 19760 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:13:48.982  INFO 19760 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 11:13:49.309  INFO 19760 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 11:13:49.369  INFO 19760 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 11:13:49 CST 2023
+2023-02-09 11:13:49.372  INFO 19760 --- [main] l.z.c.c.CommunityApplicationTests        : Started CommunityApplicationTests in 2.134 seconds (JVM running for 2.83)
+2023-02-09 11:13:49.413  INFO 19760 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 11:13:49.589  INFO 19760 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 11:13:49.590  INFO 19760 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:14:16.588  INFO 3612 --- [main] l.z.c.c.CommunityApplicationTests        : Starting CommunityApplicationTests on DESKTOP-66VTR6R with PID 3612 (started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 11:14:16.589  INFO 3612 --- [main] l.z.c.c.CommunityApplicationTests        : No active profile set, falling back to default profiles: default
+2023-02-09 11:14:18.016  INFO 3612 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:14:18.140  INFO 3612 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 11:14:18.472  INFO 3612 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 11:14:18.535  INFO 3612 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 11:14:18 CST 2023
+2023-02-09 11:14:18.539  INFO 3612 --- [main] l.z.c.c.CommunityApplicationTests        : Started CommunityApplicationTests in 2.149 seconds (JVM running for 2.844)
+2023-02-09 11:14:18.578  INFO 3612 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 11:14:18.762  INFO 3612 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 11:14:18.762  INFO 3612 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:14:25.018  INFO 17724 --- [main] l.z.c.community.CommunityApplication     : Starting CommunityApplication v0.0.1-SNAPSHOT on DESKTOP-66VTR6R with PID 17724 (D:\code\programmerCommunity\target\community-0.0.1-SNAPSHOT.jar started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 11:14:25.021  INFO 17724 --- [main] l.z.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2023-02-09 11:14:27.097  INFO 17724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2023-02-09 11:14:27.108  INFO 17724 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-09 11:14:27.108  INFO 17724 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2023-02-09 11:14:27.181  INFO 17724 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-09 11:14:27.182  INFO 17724 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2078 ms
+2023-02-09 11:14:27.942  INFO 17724 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:14:28.113  INFO 17724 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 11:14:28.325  INFO 17724 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 11:14:28.388  INFO 17724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2023-02-09 11:14:28.398  INFO 17724 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 11:14:28 CST 2023
+2023-02-09 11:14:28.400  INFO 17724 --- [main] l.z.c.community.CommunityApplication     : Started CommunityApplication in 3.892 seconds (JVM running for 4.339)
+2023-02-09 11:14:28.432  INFO 17724 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 11:14:28.714  INFO 17724 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-09 11:14:28.741  INFO 17724 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule stop Thu Feb 09 11:14:28 CST 2023
+2023-02-09 11:14:34.097  INFO 17724 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-09 11:14:34.098  INFO 17724 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-09 11:14:34.105  INFO 17724 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-02-09 11:37:29.731  INFO 17724 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 11:37:29.731  INFO 17724 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:37:29.731  INFO 17724 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-09 11:37:29.731  INFO 17724 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-09 11:37:39.600  INFO 21656 --- [main] l.z.c.c.CommunityApplicationTests        : Starting CommunityApplicationTests on DESKTOP-66VTR6R with PID 21656 (started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 11:37:39.600  INFO 21656 --- [main] l.z.c.c.CommunityApplicationTests        : No active profile set, falling back to default profiles: default
+2023-02-09 11:37:41.060  INFO 21656 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:37:41.196  INFO 21656 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 11:37:41.532  INFO 21656 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 11:37:41.593  INFO 21656 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 11:37:41 CST 2023
+2023-02-09 11:37:41.593  INFO 21656 --- [main] l.z.c.c.CommunityApplicationTests        : Started CommunityApplicationTests in 2.219 seconds (JVM running for 3.032)
+2023-02-09 11:37:41.633  INFO 21656 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 11:37:41.865  INFO 21656 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 11:37:41.865  INFO 21656 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:38:25.868  INFO 13412 --- [main] l.z.c.community.CommunityApplication     : Starting CommunityApplication v0.0.1-SNAPSHOT on DESKTOP-66VTR6R with PID 13412 (D:\code\programmerCommunity\target\community-0.0.1-SNAPSHOT.jar started by Lenovo in D:\code\programmerCommunity)
+2023-02-09 11:38:25.868  INFO 13412 --- [main] l.z.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2023-02-09 11:38:27.923  INFO 13412 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2023-02-09 11:38:27.939  INFO 13412 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-09 11:38:27.939  INFO 13412 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2023-02-09 11:38:28.005  INFO 13412 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-09 11:38:28.005  INFO 13412 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2052 ms
+2023-02-09 11:38:28.781  INFO 13412 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:38:28.922  INFO 13412 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-09 11:38:29.095  INFO 13412 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-09 11:38:29.163  INFO 13412 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2023-02-09 11:38:29.165  INFO 13412 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Thu Feb 09 11:38:29 CST 2023
+2023-02-09 11:38:29.175  INFO 13412 --- [main] l.z.c.community.CommunityApplication     : Started CommunityApplication in 3.799 seconds (JVM running for 4.334)
+2023-02-09 11:38:29.203  INFO 13412 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-09 11:38:29.454  INFO 13412 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-09 11:38:29.486  INFO 13412 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule stop Thu Feb 09 11:38:29 CST 2023
+2023-02-09 11:38:39.072  INFO 13412 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-09 11:38:39.073  INFO 13412 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-09 11:38:39.081  INFO 13412 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2023-02-09 11:40:45.045  INFO 13412 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-09 11:40:45.045  INFO 13412 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-09 11:40:45.045  INFO 13412 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-09 11:40:45.045  INFO 13412 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
