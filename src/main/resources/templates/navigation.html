@@ -3,30 +3,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
 <div th:fragment="nav" >
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default " style="background-color: rgba(255, 255, 255, 0.3);">
         <div class="container navigation-nav">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">知猿社区</span>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">知猿社区</a>
+                <a class="navbar-brand" href="/" style="color: rgba(0,0,0,.9);">知猿社区</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <form class="navbar-form navbar-left" action="/" method="get">
                     <div class="form-group input-group">
                         <input type="text" class="form-control" name="search" placeholder="搜索问题">
                         <span class="input-group-btn">
-                            <button class="btn btn-default " type="submit">搜索</button>
+                            <button class="btn btn-default " type="submit">
+                                <svg class="ali-icon" aria-hidden="true">
+                                    <use xlink:href="#icon-Icon_Search"></use>
+                                </svg>
+                            </button>
                         </span>
                     </div>
                     <!--                    <button type="submit" class="btn btn-default">搜索</button>-->
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li th:if="${session.user != null}">
+                        <svg class="ali-icon" aria-hidden="true">
+                            <use xlink:href="#icon-send"></use>
+                        </svg>
                         <a  href="/publish">提问</a>
                     </li>
-                    <li><a href="/profile/replies">消息 <span class="badge navigation-message" th:if="${session.unreadCount}!=0" th:text="${session.unreadCount}"></span></a>
+                    <li>
+                        <a href="/profile/replies">
+                            <svg class="ali-icon" aria-hidden="true">
+                                <use xlink:href="#icon-comment"></use>
+                            </svg>
+                            消息
+                            <span class="badge navigation-message" th:if="${session.unreadCount}!=0" th:text="${session.unreadCount}"></span>
+                        </a>
                     </li>
                     <li class="dropdown" th:if="${session.user != null}">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -36,13 +52,26 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="glyphicon glyphicon-home" href="/profile/questions"> 我的主页</a></li>
-                            <li><a class="glyphicon glyphicon-off" href="/logout"> 退出</a></li>
+                            <li><a class="glyphicon glyphicon-home " href="/profile/questions">
+                                <svg class="ali-icon" aria-hidden="true">
+                                    <use xlink:href="#icon-user"></use>
+                                </svg>
+                                我的主页</a></li>
+                            <li><a class="glyphicon glyphicon-off " href="/logout">
+                                <svg class="ali-icon" aria-hidden="true">
+                                    <use xlink:href="#icon-log-out"></use>
+                                </svg>
+                                退出</a></li>
                         </ul>
                     </li>
                     <li th:if="${session.user == null}">
 <!--                        <a th:href="@{https://github.com/login/oauth/authorize(client_id='d0d3ade7e00a78d3000f',redirect_uri=${#httpServletRequest.getServletContext().getAttribute('redirectUri')},scope='user',state=1)}">登录</a>-->
-                        <a th:href="@{https://github.com/login/oauth/authorize(client_id='d0d3ade7e00a78d3000f',redirect_uri=${#httpServletRequest.getRequestURL()+'callback'},scope='user',state=1)}">Github登录</a>
+                        <a  th:href="@{https://github.com/login/oauth/authorize(client_id='d0d3ade7e00a78d3000f',redirect_uri=${#httpServletRequest.getRequestURL()+'callback'},scope='user',state=1)}">
+                            <svg class="ali-icon" aria-hidden="true">
+                                <use xlink:href="#icon-github"></use>
+                            </svg>
+                            登录
+                        </a>
                     </li>
                 </ul>
             </div>
