@@ -51,6 +51,11 @@ vim src/main/resources/application-production.properties
 - mvn clean compile package/mvn package
 - java -jar -Dspring.profiles.active=production target/community-0.0.1-SNAPSHOT.jar
 
+- nohup java -jar -Dspring.profiles.active=production target/community-0.0.1-SNAPSHOT.jar>> /code/idtest.log 2>&1 &
+
+
+## 技术网站
+- https://blog.csdn.net/wsf408908184/article/details/80760791
 ## 答辩网站
 * [ucloud](https://console.ucloud.cn/uhost/uhost)
 * [github登陆](https://github.com/settings/applications/1383090)
