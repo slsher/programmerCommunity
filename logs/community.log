@@ -351,3 +351,57 @@
 2023-03-26 21:44:09.810  INFO 30412 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2023-03-26 21:44:09.811  INFO 30412 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-03-26 21:44:09.812  INFO 30412 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-03-26 22:18:37.227  INFO 12580 --- [restartedMain] l.z.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-66VTR6R with PID 12580 (D:\code\programmerCommunity\target\classes started by Lenovo in D:\code\programmerCommunity)
+2023-03-26 22:18:37.230  INFO 12580 --- [restartedMain] l.z.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2023-03-26 22:18:37.267  INFO 12580 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-26 22:18:37.267  INFO 12580 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-26 22:18:38.063  INFO 12580 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2023-03-26 22:18:38.079  INFO 12580 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-26 22:18:38.079  INFO 12580 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2023-03-26 22:18:38.148  INFO 12580 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-26 22:18:38.148  INFO 12580 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 881 ms
+2023-03-26 22:18:38.163  INFO 12580 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-26 22:18:38.263  INFO 12580 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-26 22:18:38.263  INFO 12580 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/community'
+2023-03-26 22:18:38.696  INFO 12580 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-26 22:18:38.742  INFO 12580 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-03-26 22:18:38.850  INFO 12580 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-03-26 22:18:39.221  INFO 12580 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-26 22:18:39.254  INFO 12580 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2023-03-26 22:18:39.254  INFO 12580 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Sun Mar 26 22:18:39 CST 2023
+2023-03-26 22:18:39.254  INFO 12580 --- [restartedMain] l.z.c.community.CommunityApplication     : Started CommunityApplication in 2.32 seconds (JVM running for 3.393)
+2023-03-26 22:18:39.290  INFO 12580 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule stop Sun Mar 26 22:18:39 CST 2023
+2023-03-26 22:18:39.405  INFO 12580 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-26 22:18:39.405  INFO 12580 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-26 22:18:39.408  INFO 12580 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-03-26 22:20:41.295  INFO 12580 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-03-26 22:20:41.295  INFO 12580 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-26 22:20:41.295  INFO 12580 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-03-26 22:20:41.295  INFO 12580 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-03-26 22:20:44.086  INFO 5024 --- [restartedMain] l.z.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-66VTR6R with PID 5024 (D:\code\programmerCommunity\target\classes started by Lenovo in D:\code\programmerCommunity)
+2023-03-26 22:20:44.087  INFO 5024 --- [restartedMain] l.z.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2023-03-26 22:20:44.111  INFO 5024 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-26 22:20:44.111  INFO 5024 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-26 22:20:44.823  INFO 5024 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2023-03-26 22:20:44.838  INFO 5024 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-26 22:20:44.838  INFO 5024 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2023-03-26 22:20:44.901  INFO 5024 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-26 22:20:44.901  INFO 5024 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 790 ms
+2023-03-26 22:20:44.923  INFO 5024 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-26 22:20:45.008  INFO 5024 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-26 22:20:45.008  INFO 5024 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/community'
+2023-03-26 22:20:45.386  INFO 5024 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-26 22:20:45.424  INFO 5024 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-03-26 22:20:45.524  INFO 5024 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-03-26 22:20:45.824  INFO 5024 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-26 22:20:45.856  INFO 5024 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2023-03-26 22:20:45.856  INFO 5024 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule start Sun Mar 26 22:20:45 CST 2023
+2023-03-26 22:20:45.856  INFO 5024 --- [restartedMain] l.z.c.community.CommunityApplication     : Started CommunityApplication in 2.012 seconds (JVM running for 2.988)
+2023-03-26 22:20:45.887  INFO 5024 --- [scheduling-1] l.z.c.community.schedule.HotTagTasks     : hotTagSchedule stop Sun Mar 26 22:20:45 CST 2023
+2023-03-26 22:20:49.328  INFO 5024 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-26 22:20:49.328  INFO 5024 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-26 22:20:49.331  INFO 5024 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-03-26 22:25:22.805  INFO 5024 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-03-26 22:25:22.805  INFO 5024 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-26 22:25:22.805  INFO 5024 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-03-26 22:25:22.820  INFO 5024 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
