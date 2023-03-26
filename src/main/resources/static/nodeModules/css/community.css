@@ -5,7 +5,10 @@
 
 body {
     /*background-color: #efefef;*/
-    background: url("/images/bg.jpg") repeat;
+    background: url("/images/bg3.png") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #CCCCCC;
     height: 100%;
 }
 
