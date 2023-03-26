@@ -30,10 +30,12 @@
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li th:if="${session.user != null}">
-                        <svg class="ali-icon" aria-hidden="true">
-                            <use xlink:href="#icon-send"></use>
-                        </svg>
-                        <a  href="/publish">提问</a>
+
+                        <a  href="/publish">
+                            <svg class="ali-icon" aria-hidden="true">
+                                <use xlink:href="#icon-send"></use>
+                            </svg>
+                            提问</a>
                     </li>
                     <li>
                         <a href="/profile/replies">
@@ -52,12 +54,12 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="glyphicon glyphicon-home " href="/profile/questions">
+                            <li><a class="glyphicon  " href="/profile/questions">
                                 <svg class="ali-icon" aria-hidden="true">
                                     <use xlink:href="#icon-user"></use>
                                 </svg>
                                 我的主页</a></li>
-                            <li><a class="glyphicon glyphicon-off " href="/logout">
+                            <li><a class="glyphicon  " href="/logout">
                                 <svg class="ali-icon" aria-hidden="true">
                                     <use xlink:href="#icon-log-out"></use>
                                 </svg>
