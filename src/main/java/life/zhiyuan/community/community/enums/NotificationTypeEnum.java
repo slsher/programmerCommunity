@@ -2,6 +2,7 @@ package life.zhiyuan.community.community.enums;
 
 /**
  * Created by zhuzhiwen by 2020/10/21 15:52
+ * 判断回复的时问题还是评论
  */
 public enum NotificationTypeEnum {
     REPLAY_QUESTION(1, "回复了问题"),
